@@ -3,15 +3,16 @@ body{
     font-size: 1.2rem;
     line-height: 1.5;
     margin: 0;
-    color: #353535;
+    color: #E0E0E0;
+
 }
 
 h1{
-    text-align: center;
+    position: absolute;
 }
 
 .Button{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 700;
     border: none;
 
@@ -34,6 +35,7 @@ h1{
     margin-right: auto;
     padding-left: 1rem;
     padding-right: 1rem;
+
 
     background-position: center;
     background-position: cover;
@@ -64,25 +66,45 @@ h1{
 }
 
 .Background{
-    background-attachment: fixed;
-    text-align: center;
-    display: auto;
+
+    width: 100vw;
+    height: 100vh;
+
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    position: fixed;
+
+    color: #E0E0E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .Contact{
-    
-    width: 100%;
-    height: 1000px;
 
     background-color: #353535;
+
+    margin-top: 35rem;
+
+    top: 100%;
+    left: 50%;
+
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
     text-align: center;
+    position: absolute;
+
+    width: 2000px;
+    height: 1000px;
+
 }
 
 .ContactSymbols{
 
     z-index: 0;
     display: table-row;
-    margin: auto;
 
     width: 7.5%;
     height: 10%;
