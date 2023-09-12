@@ -1,0 +1,86 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0;
+    color: #353535;
+}
+
+h1{
+    text-align: center;
+}
+
+.Button{
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+
+    color: #E0E0E0;
+
+    background-color: #284B63;
+    transition-duration: .3s;
+
+    margin-right: 1.1rem;
+    
+}
+
+.Button1:Hover{
+    color: #353535;
+}
+
+.container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    background-position: center;
+    background-position: cover;
+}
+
+.VerticalCenter{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.Square{
+    position: fixed;
+
+    margin-bottom: 0;
+    padding-bottom: 0;
+    line-height: lem;
+
+    width: 100%;
+    height: 75px;
+
+    background-color: #284B63;
+}
+
+.Background{
+    background-image: url(https://image.api.playstation.com/vulcan/ap/rnd/202308/1700/d8b94514deda08e858146d81cbc9de22ca56a822a79219f3.jpg);
+    padding-top: 15em;
+    background-size: 100%;
+    height: 30em;
+    background-repeat: no-repeat;
+    color:white;
+    background-attachment: fixed;
+}
+
+.Contact{
+    width: 100%;
+    height: 1200px;
+    background-color: #353535;
+}
+
+.ContactSymbols{
+    width: 100px;
+    height: 100px;
+    padding-top: 65rem;
+    filter: invert(100%) sepia(76%) saturate(176%) hue-rotate(323deg) brightness(115%) contrast(76%);
+}
+
