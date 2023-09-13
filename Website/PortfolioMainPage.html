@@ -11,21 +11,40 @@
         function ClearText(){
             document.ContactForm.message.value = '';
         }
+
+    function ScrollFunction(){  
+        document.getElementById("Contact")[3].scrollIntoView();
+    }
     </script>
 
 </head>
+
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+
+        #section{
+            height: 1000px;
+        }
+    </style>
+
     <body>
         <div class="Square">
             <div class="VerticalCenter">
-                <button class="Button Button1">About</button>
-                <button class="Button Button1">Projects</button>
-                <button class="Button Button1">Contact</button>
+                <button class="Button Button1" onclick= "window.location.href='AboutPage.html';">About</button>
+                <button class="Button Button1"onclick ="window.location.href = 'ProjectPage.html';">Projects</button>
+                <button class="Button Button1" onclick="document.getElementById('section').scrollIntoView();">Contact</button>
 
             </div>
         </div>
 
         <div class="Background">
             <h1>Max Lichtneker</h1>
+
+            <p1>Software & game developer</p1>
+
+
             <video autoplay muted loop>
                 <source src="Hunt  Showdown 2023.05.30 - 20.46.31.05.DVR.mp4">
             </video>
@@ -33,7 +52,7 @@
     </body>
 
     <body>
-        <div class="Contact">
+        <div class="Contact" id= "section">
             <a href="https://twitter.com/MLichtneker"><img src="twitter.svg" class="ContactSymbols">
             <a href="https://www.facebook.com/"><img src="facebook.svg" class="ContactSymbols">
             <a href="https://www.instagram.com/"><img src="instagram.svg" class="ContactSymbols">
@@ -58,7 +77,7 @@
                 </div>
 
                 <div>
-                    <button type="submit" onsubmit="ClearText()"> Send</button>
+                    <button type="submit"> Send</button>
                 </div>
             </form>
 

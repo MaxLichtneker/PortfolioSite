@@ -4,11 +4,17 @@ body{
     line-height: 1.5;
     margin: 0;
     color: #E0E0E0;
+    background-color: #353535;
 
 }
 
 h1{
     position: absolute;
+}
+
+p1{
+    position: absolute;
+    padding-top: 5rem;
 }
 
 .Button{
@@ -104,9 +110,6 @@ h1{
 
     z-index: 0;
     display: table-row;
-
-
-    
 
     width: 7.5%;
     height: 25%;
