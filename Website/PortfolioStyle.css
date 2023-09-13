@@ -98,7 +98,6 @@ h1{
 
     width: 100%;
     height: 1000px;
-
 }
 
 .ContactSymbols{
@@ -106,11 +105,10 @@ h1{
     z-index: 0;
     display: table-row;
 
-    width: 7.5%;
-    height: 10%;
-    filter: invert(100%) sepia(76%) saturate(176%) hue-rotate(323deg) brightness(115%) contrast(76%);
-}
 
-textarea{
-    color: rgba(2, 3, 4, 0.6);
+    
+
+    width: 7.5%;
+    height: 25%;
+    filter: invert(100%) sepia(76%) saturate(176%) hue-rotate(323deg) brightness(115%) contrast(76%);
 }
