@@ -9,6 +9,13 @@
     </script>
 
 </head>
+
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+    </style>
+
     <body>
         <!--task bar wih buttons leading to different pages -->
         <div class="TaskBar">
@@ -21,11 +28,11 @@
         </div>
 
         <div class="container">
-            <div class="VerticalCenter">
-                <img src="..\Images\MaxLichtneker-modified.png" alt="AboutMeImage" style="padding-bottom: 30rem;">
-            </div>
 
-            <div class="VerticalCenter" style="padding-top: 10rem;">
+            <img src="..\Images\MaxLichtneker-modified.png" alt="AboutMeImage"style="padding-top: 125px;">
+
+            <div class="VerticalCenter">
+
                 <p3> 
                     I live in the Netherlands and am currently studying software development at Hogeschool Utrecht. Ever since I first started playing video games, 
                     I’ve been curious about how they’re made and what goes on behind the scenes. 
@@ -38,45 +45,53 @@
     </body>
 
     <body>
-        <div class="ScrollBar">
+        <div class="ScrollBar", id="Skills">
 
-        <hr style="width: 5%; color: #E0E0E0; margin-bottom: .1rem;">
-        <i class="arrow down"></i>
+        <button class="ScrollDownButton ScrollDownButton1" onclick="document.getElementById('Skills').scrollIntoView();">
+            <hr id="hr-nav"/>
+            <i class="arrow down"></i>
+        </button>
+        <div>
+
 
         <h3>Skills:</h3>
+        <div class="SkillBody">
 
-         <!--list of skills -->
-        <p2>-Unity 3D (animator and animation, terrain tool, physics , lighting, shadergraph, urp,) </p2>
-        <p2>-Unreal engine(Blueprint)</p2>
-        <p2>-C# (since 2018)</p2>
-        <p2>-C++ (since 2022)</p2>
-        <p2>-HTML</p2>
-        <p2>-CSS</p2>
-        <p2>-Visual Studio (since 2018)</p2>
-        <p2>-Visual Studio code</p2>
-        <p2>-Maya (since 2019)</p2>
-        <p2>-Agile (since 2018)</p2>
-        <p2>-Software development version control/GIT (since 2019)</p2>
-        <p2>-Basic knowledge of Photoshop, Adobe Illustrator and Premiere Pro</p2>
+            <!--list of skills -->
+            <p2>-Unity 3D (animator and animation, terrain tool, physics , lighting, shadergraph, urp,) </p2>
+            <p2>-Unreal engine(Blueprint)</p2>
+            <p2>-C# (since 2018)</p2>
+            <p2>-C++ (since 2022)</p2>
+            <p2>-HTML</p2>
+            <p2>-CSS</p2>
+            <p2>-Visual Studio (since 2018)</p2>
+            <p2>-Visual Studio code</p2>
+            <p2>-Maya (since 2019)</p2>
+            <p2>-Agile (since 2018)</p2>
+            <p2>-Software development version control/GIT (since 2019)</p2>
+            <p2>-Basic knowledge of Photoshop, Adobe Illustrator and Premiere Pro</p2>
 
-        <!--Images of software I use-->
-        <div class="SoftwarePadding">
-            <img src="..\ImagesSoftware\Unity_2021.svg" style="width: 320px; height: 117.75;">
-            <img src="..\ImagesSoftware\unreal-engine.svg" class="SoftwareSymbols">
-            <img src="..\ImagesSoftware\Visual_Studio_Icon_2022.svg" width="180rem">
         </div>
+            <!--Images of software I use-->
+            <div class="SoftwarePadding">
+                <img src="..\ImagesSoftware\Unity_2021.svg" style="width: 320px; height: 117.75;">
+                <img src="..\ImagesSoftware\unreal-engine.svg" class="SoftwareSymbols">
+                <img src="..\ImagesSoftware\Visual_Studio_Icon_2022.svg" width="180rem">
+            </div>
+            
+
+                <!-- download link to CV-->
+
+                <h3>Download my CV:</h3>
+
+                <form method="get" action="..\CV\max-lichtneker-cv-open-to-public-1-1.pdf" target="_blank">
+                    <button class="DownloadButton DownloadButton1" type="submit">
+                        <img src="..\Images\download.svg" style="width: 1rem; height: 1rem; filter: invert(100%) sepia(76%) saturate(176%) hue-rotate(323deg) brightness(115%) contrast(76%);"></img >
+                        Download
+                    </button>
+                </form>
+            </div>
        
-
-        <!-- download link to CV-->
-
-        <h3>Download my CV:</h3>
-
-        <form method="get" action="..\CV\max-lichtneker-cv-open-to-public-1-1.pdf" target="_blank">
-            <button class="DownloadButton DownloadButton1" type="submit">
-                <img src="..\Images\download.svg" style="width: 1rem; height: 1rem; filter: invert(100%) sepia(76%) saturate(176%) hue-rotate(323deg) brightness(115%) contrast(76%);"></img >
-                Download
-            </button>
-        </form>
     </body>
 </head>
 

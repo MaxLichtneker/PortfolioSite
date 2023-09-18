@@ -5,12 +5,11 @@ body{
     margin: 0;
     color: #E0E0E0;
     background-color: #353535;
-
 }
 
+
 h1{
-    text-align: center;
-    position: absolute;
+    position: relative;
 }
 
 h2{
@@ -18,25 +17,24 @@ h2{
 }
 
 h3{
-    position: relative;
-   
     font-size: 2rem;
 
     padding-top: 1rem;
 }
 
 p1{
-    position: absolute;
     padding-top: 5rem;
 }
 
 p2{
     display:block;
+    text-align: start;
 }
 
 p3{
     color: #284B63;
     font-size: 1.4rem;
+
 }
 
 /* button style */
@@ -80,6 +78,18 @@ p3{
     background-color: #82A0B6;
 }
 
+/* button that scrolls to the bottom of the screen*/
+button.ScrollDownButton{
+    background-color: #353535;
+    color: #E0E0E0;
+    width: 10%;
+    border-style: none;
+}
+
+button.ScrollDownButton1:hover~#hr-nav{
+    border: 1px solid #82A0B6;
+}
+
 .container{
     width: 100%;
     height: 60rem;
@@ -94,8 +104,29 @@ p3{
     object-fit: cover;
     position: fixed;
 
+    text-align: start;
+
     justify-content: center;
+    background-color: #E0E0E0;
+}
+
+.containerMainPage{
+    width: 100%;
+    height: 60rem;
+
+    margin-left: auto;
+    margin-right: auto;
+    
+    padding-top: 6rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    object-fit: cover;
+    position: fixed;
+
     text-align: center;
+
+    justify-content: center;
     background-color: #E0E0E0;
 }
 
@@ -103,7 +134,7 @@ p3{
 .VerticalCenter{
     margin: 0;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -122,22 +153,6 @@ p3{
 
     background-color: #284B63;
     z-index: 1;
-}
-
-.Background{
-
-    width: 100vw;
-    height: 100vh;
-
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    position: fixed;
-
-    color: #E0E0E0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /* container for the contact area of the homepage */
@@ -177,6 +192,10 @@ p3{
     height: 1000px;
 }
 
+.SkillBody{
+    margin-left: 35%;
+}
+
 /* style for the contact images*/
 .ContactSymbols{
 
@@ -184,7 +203,7 @@ p3{
     display: table-row;
 
     width: 7.5%;
-    height: 25%;
+    margin-top: 0;
     filter: invert(100%) sepia(76%) saturate(176%) hue-rotate(323deg) brightness(115%) contrast(76%);
 }
 
@@ -205,17 +224,23 @@ p3{
 }
 
 .arrow {
-    border: solid #E0E0E0;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
+border: solid #E0E0E0;
+border-width: 0 3px 3px 0;
+display: inline-block;
+padding: 3px;
 
-  }
+}
+
 
 .down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
 
     color: #E0E0E0;
-  }
+}
+
+#hr-nav{
+    border: 1px solid #E0E0E0;
+}
+
 
