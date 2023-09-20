@@ -14,6 +14,12 @@
         }
         $(document).ready(dynamicHeight);
     </script>
+<style>
+    html{
+    scroll-behavior: smooth;
+}
+</style>
+
 
 </head>
     <body>
@@ -29,8 +35,8 @@
         <div class="SubBar">
             <hr id="SubBarLine" style=" margin: 0"/>
             <div class="VerticalCenter" style="top: auto; padding-top: 35px;">
-                <button class="ButtonSubBar Button1"onclick= ""> Malaga Jam</button>
-                <button class="ButtonSubBar Button1" onclick= "">Switch</button>
+                <button class="ButtonSubBar Button1"onclick= "document.getElementById('Malaga').scrollIntoView();">Malaga Jam</button>
+                <button class="ButtonSubBar Button1" onclick= "document.getElementById('Switch').scrollIntoView();">Switch</button>
                 <button class="ButtonSubBar Button1"> Overgrown</button>
                 <button class="ButtonSubBar Button1"onclick=""> ExamenProject </button>
                 <button class="ButtonSubBar Button1"onclick=""> Endless Runner </button>
@@ -38,7 +44,7 @@
             
             <div class="GridContainer">
 
-                <div>
+                <div id = "Malaga">
                     <img src="..\ImagesProjects\MalagaJamImage_1.webp" alt="AboutMeImage" style="width: 205vh; height: 100vh; padding-top:55px;">
                 </div>
 
@@ -51,7 +57,7 @@
                     </div>
                 </div>
 
-                <div>
+                <div id="Switch">
                     <div style="width: 100%; height: 100vh; background-image:url('../ImagesProjects/SwitchBackgroundWebsite.png'); background-repeat: no-repeat;">
                         <div style="position: absolute; margin-top: 15vh; margin-left: 40vh;"> 
                             <video controls style="height: 70vh;">
@@ -66,8 +72,28 @@
                     <div>  
                         <p2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga nam impedit voluptate ducimus, perspiciatis minus tenetur beatae dolorum in sed placeat obcaecati incidunt et perferendis iste! Ut quo sint porro!
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores error distinctio fugit, libero eveniet harum repellendus vero tenetur quis placeat, fugiat ad sit mollitia modi cumque itaque soluta sapiente optio!
-                      </p2>
+                        </p2>
                     </div>
+                </div>
+                
+                <div id="Overgrown">
+                    <div style="width: 100%; height: 100vh; background-image:url('../ImagesProjects/OvergownBackgroundImage.png'); background-repeat: no-repeat;">
+                        <div style="position: absolute; margin-top: 15vh; margin-left: 40vh;"> 
+                            <video controls style="height: 70vh;">
+                                <source src="..\Videos\Overgrown Trailer-720p-1695042157.mp4" style="z-index: 1;">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="GridContainerText">
+                    <div></div>
+                    <div>  
+                        <p2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga nam impedit voluptate ducimus, perspiciatis minus tenetur beatae dolorum in sed placeat obcaecati incidunt et perferendis iste! Ut quo sint porro!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores error distinctio fugit, libero eveniet harum repellendus vero tenetur quis placeat, fugiat ad sit mollitia modi cumque itaque soluta sapiente optio!
+                        </p2>
+                    </div>
+                </div>
 
             </div>
         </div>
