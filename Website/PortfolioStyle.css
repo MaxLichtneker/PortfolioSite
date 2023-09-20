@@ -288,10 +288,22 @@ padding: 3px;
 
 .GridContainer{
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: fit-content(1) repeat(5, 1fr);
+
+    grid-area: auto;
+
+    margin: 0 auto;
 }
 
-.GridContainerText{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+.image , .GrindContent{
+    grid-row: 1/1; 
+    grid-column: 1/6;
+    padding-top:55px;
+}
+
+.GrindContent{
+
+    align-self:center;
+    height: 70vh;
 }
