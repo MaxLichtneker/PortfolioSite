@@ -145,10 +145,6 @@ button.ScrollDownButton1:hover~#hr-nav{
     background-color: #E0E0E0;
 }
 
-.VideoContainer{
-    
-}
-
 /* makes sure the buttons in the taskbar are central on the screen*/
 .VerticalCenter{
     margin: 0;
@@ -290,4 +286,12 @@ padding: 3px;
     color: #E0E0E0;
 }
 
+.GridContainer{
+    display: grid;
+    grid-template-columns: auto;
+}
 
+.GridContainerText{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
