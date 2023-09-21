@@ -32,82 +32,102 @@
             </div>
         </div>
 
-        <div class="SubBar">
-            <hr id="SubBarLine" style=" margin: 0"/>
-            <div class="VerticalCenter" style="top: auto; padding-top: 35px;">
-                <button class="ButtonSubBar Button1"onclick= "document.getElementById('Malaga').scrollIntoView();">Malaga Jam</button>
-                <button class="ButtonSubBar Button1" onclick= "document.getElementById('Switch').scrollIntoView();">Switch</button>
-                <button class="ButtonSubBar Button1"> Overgrown</button>
-                <button class="ButtonSubBar Button1"onclick=""> ExamenProject </button>
-                <button class="ButtonSubBar Button1"onclick=""> Endless Runner </button>
+        <div class="GridContainer">
+
+            <div class="SubBar">
+                <hr id="SubBarLine" style=" margin: 0"/>
+                <div class="VerticalCenter" style="top: auto; padding-top: 35px;">
+                    <button class="ButtonSubBar Button1"onclick= "document.getElementById('Malaga').scrollIntoView();">Malaga Jam</button>
+                    <button class="ButtonSubBar Button1" onclick= "document.getElementById('Switch').scrollIntoView();">Switch</button>
+                    <button class="ButtonSubBar Button1" onclick= "document.getElementById('Overgrown').scrollIntoView();"> Overgrown</button>
+                    <button class="ButtonSubBar Button1"onclick=""> ExamenProject </button>
+                    <button class="ButtonSubBar Button1"onclick=""> Endless Runner </button>
+                </div>
             </div>
             
-            <div class="GridContainer">
+                <img src="..\ImagesProjects\MalagaJamImage_1.webp" id="Malaga" class="image" style="width: 100%;  height: 90vh;">
 
-                <img src="..\ImagesProjects\SwitchBackground.png" class="image" style="width: 100%;  height: 90%;">
+                <div class="GrindContent" style=" grid-column: 2/-1">
+                    <!-- <video class="GrindContent" controls>
+                         <source src="..\Videos\Switch gameplay.mp4" style="z-index: 2">
+                    </video>
+     -->
+                    <div class="GrindContent" style=" grid-column: 2/-1;">
+                    </div>
+                </div>
 
-                <video class="GrindContent" controls style=" grid-column: 2/-1;">
-                    <source src="..\Videos\Switch gameplay.mp4" style="z-index: 1">
-                </video>
-
-                <div style="grid-row: 2; grid-column: 3;">
-                    <p2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga nam impedit voluptate ducimus, perspiciatis minus tenetur beatae dolorum in sed placeat obcaecati incidunt et perferendis iste! Ut quo sint porro!
+                <div style= "grid-column: 3/6; padding-top: 50px; padding-bottom: 50px;">
+                    <p2>
+                        Whilst on an educational school which only a select few students were chosen for, 
+                        I participated in the global game jam in Malaga Spain. We had 3 days to make and develop a game with the theme repair.
+                    </p2>
+                    &nbsp
+                    <p2>
+                        Together with my group we came up with the idea to create a game about fixing tattoos. 
+                        In this game I manly worked on making the dialog mechanic at the start of the game where it chooses a random set of dialog which will then determine which tattoo you will be fixing.
+                    </p2>
+                    &nbsp
+                    <p2>
+                        I also added a fade to the screen and added the animations in game. I also worked a bit on the timer and on the slider which measures how much you are hurting the customer. 
                     </p2>
                 </div>
 
-                <img src="..\ImagesProjects\OvergownBackgroundImage.png" class="image" style="width: 100%;  height: 90%; grid-row: 3/3; grid-column: 1/6;">
+                <img src="..\ImagesProjects\SwitchBackground.png" id="Switch" class="image" style="width: 100%;  height: 90%; grid-row: 4/4; grid-column: 1/8;">
 
-                <video class="GrindContent" controls style=" grid-column: 2/-1; grid-row: 3;">
-                    <source src="..\Videos\Overgrown Trailer-720p-1695042157.mp4" style="z-index: 1">
-                </video>
+                <div class="GrindContent" style=" grid-column: 3/-1; grid-row: 4">
 
-                <!-- <div>
-                    <p2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga nam impedit voluptate ducimus, perspiciatis minus tenetur beatae dolorum in sed placeat obcaecati incidunt et perferendis iste! Ut quo sint porro!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores error distinctio fugit, libero eveniet harum repellendus vero tenetur quis placeat, fugiat ad sit mollitia modi cumque itaque soluta sapiente optio!
-                    </p2>
-                </div> -->
+                    <video class="GrindContent" controls>
+                        <source src="..\Videos\Switch gameplay.mp4" style="z-index: 1">
+                    </video>
 
-                <!-- <div id="Switch">
-                    <div>
-                        <img src="..\ImagesProjects\SwitchBackgroundWebsite.png" alt="AboutMeImage" style="width: 205vh; height: 100vh; padding-top:55px;">          
+                    <div class="GrindContent" style=" grid-column: 2/-1;">
+                        <h2 style="padding-left: 35vh;">SWITCH</h2>
                     </div>
-                </div> -->
-                    
 
-                <!-- <div id="Switch">
-                    <div style="width: 100%; height: 100vh; background-image:url('../ImagesProjects/SwitchBackgroundWebsite.png'); background-repeat: no-repeat;">
-                        <div style="position: absolute; margin-top: 15vh; margin-left: 40vh;"> 
-                            <video controls style="height: 70vh;">
-                                <source src="..\Videos\Switch gameplay.mp4" style="z-index: 1;">
-                            </video>
-                        </div>
-                   </div> 
-                </div> -->
-             
-                <!-- <div>  
-                    <p2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga nam impedit voluptate ducimus, perspiciatis minus tenetur beatae dolorum in sed placeat obcaecati incidunt et perferendis iste! Ut quo sint porro!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores error distinctio fugit, libero eveniet harum repellendus vero tenetur quis placeat, fugiat ad sit mollitia modi cumque itaque soluta sapiente optio!
+                </div>
+
+                <div style= "grid-column: 3/6;">
+                    <p2>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga nam impedit voluptate ducimus, perspiciatis minus tenetur beatae dolorum in sed placeat obcaecati incidunt et perferendis iste! Ut quo sint porro!
                     </p2>
-                </div> -->
-<!--                 
-                <div id="Overgrown">
-                    <div style="width: 100%; height: 100vh; background-image:url('../ImagesProjects/OvergownBackgroundImage.png'); background-repeat: no-repeat;">
-                        <div style="position: absolute; margin-top: 15vh; margin-left: 40vh;"> 
-                            <video controls style="height: 70vh;">
-                                <source src="..\Videos\Overgrown Trailer-720p-1695042157.mp4" style="z-index: 1;">
-                            </video>
-                        </div>
+                </div>
+
+                <img src="..\ImagesProjects\OvergownBackgroundImage.png" id="Overgrown" class="image" style="width: 100%;  height: 90%; grid-row: 6/6; grid-column: 1/8;">
+
+                <img src="..\ImagesProjects\OvergownDay.png" style="grid-row: 7; grid-column: 7/8; width: 65vh; height: 100%; padding-right: 20px;">
+                <img src="..\ImagesProjects\OvergownNIght.png" style="grid-row: 8; grid-column: 7/8; width: 65vh; height: 100%; padding-top: 10px;">
+
+                <div class="GrindContent" style=" grid-column: 3/-1; grid-row: 6">
+
+                    <video class="GrindContent" controls>
+                        <source src="..\Videos\Overgrown Trailer-720p-1695042157.mp4" style="z-index: 1">
+                    </video>
+
+                    <div class="GrindContent" style=" grid-column: 2/-1;">
+                        <h2 style="padding-left: 30vh;">OVERGROWN</h2>
                     </div>
-                </div> -->
+                </div>
 
-                <!-- <div>  
-                    <p2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga nam impedit voluptate ducimus, perspiciatis minus tenetur beatae dolorum in sed placeat obcaecati incidunt et perferendis iste! Ut quo sint porro!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores error distinctio fugit, libero eveniet harum repellendus vero tenetur quis placeat, fugiat ad sit mollitia modi cumque itaque soluta sapiente optio!
+                <div style= "grid-column: 3/6;">
+                    <p2>
+                        For this school project I worked with 3 others to make a game that we would publish on Itch.io. 
                     </p2>
-                </div> -->
+                    &nbsp
+                    <p2>
+                        We came up with a simple farming game where the world was overgrown by plants, plants all grew faster so your crops would grow faster than they normally would. 
+                        I worked on the plant growth mechanics and collecting mechanics as well as adding animations to the player and the enemy character, 
+                        I also made the enemy mechanics and the punching mechanics for the player. 
+                    </p2>
+                    &nbsp
+                    <p2>
+                        I worked together with: Bouke Weel the other dev and 2 artists: Anne Roos Leeuwis and Floor van den Bank. 
+                    </p2>
+                </div>
 
             </div>
-        </div>
+
+        </div> 
+
     </body>
 </head>
 
