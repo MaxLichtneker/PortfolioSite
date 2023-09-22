@@ -186,6 +186,17 @@ button.ScrollDownButton1:hover~#hr-nav{
 
 }
 
+.TitleBar{
+    height: 12vh;
+
+    grid-row: auto;
+    grid-column: 1/8;
+    background-color: #525866;
+    text-align: center;
+
+    margin-bottom: 1vh;
+}
+
 /* container for the contact area of the homepage */
 .Contact{
 
@@ -293,16 +304,19 @@ padding: 3px;
 .GridContainer{
     display: grid;
     grid-template-columns:fit-content(100%)  repeat(6, 1fr);
-    grid-template-rows: fit-content(1) repeat(7, 1fr);
+    grid-template-rows: fit-content(1) repeat(1, 1fr);
 
     grid-area: auto;
 
     margin: 0 auto;
 }
 
-.image , .GrindContent{
-    grid-row: 2; 
-    grid-column: 1/8;
+.image{
+
+    grid-column: 3/8; 
+    width: 90%; 
+    padding-bottom: 20px;
+    grid-row: auto; 
 }
 
 .GrindContent{
@@ -311,3 +325,4 @@ padding: 3px;
     height: 50vh;
     padding-left: 12vh;
 }
+
