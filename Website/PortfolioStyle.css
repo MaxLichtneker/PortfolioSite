@@ -181,9 +181,9 @@ button.ScrollDownButton1:hover~#hr-nav{
     z-index: 0;
     display: block;
 
-    grid-row: 1/1;
-    grid-column: 1/8;
+    position: fixed;
 
+    transition: all .4s ease;
 }
 
 .TitleBar{

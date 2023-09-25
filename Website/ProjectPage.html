@@ -8,10 +8,24 @@
     <title>Max Lichtneker Portfolio</title>
     </script>
 
-    <script type="text/javascript">
+    <script type="text/javascript" >
+        
+        var previousScrollPos = window.pageYOffset;
+        window.onscroll = function(){
+            var currentScrollPos = window.pageYOffset;
+
+            if(previousScrollPos > currentScrollPos){
+               document.getElementById("SubBar").style.top = "75px"; 
+            }else{
+                document.getElementById("SubBar").style.top = "-80px";
+            }
+            previousScrollPos = currentScrollPos;
+        }
+
         function dynamicHeight(){
         $('#content').css("margin-top", $('#fix').height());
         }
+
         $(document).ready(dynamicHeight);
     </script>
 <style>
@@ -23,7 +37,7 @@
 
 </head>
     <body>
-        <div class="TaskBar">
+        <div class="TaskBar" >
             <div class="VerticalCenter">
                 <button class="Button Button1"onclick= "window.location.href = 'PortfolioMainpage.html';"> Home</button>
                 <button class="Button Button1" onclick= "window.location.href='AboutPage.html';">About</button>
@@ -32,36 +46,18 @@
             </div>
         </div>
 
-        <div class="GridContainer">
-
-            <div class="SubBar">
-                <hr id="SubBarLine" style=" margin: 0"/>
-                <div class="VerticalCenter" style="top: auto; padding-top: 35px;">
-                    <button class="ButtonSubBar Button1"onclick= "document.getElementById('Malaga').scrollIntoView();">Malaga Jam</button>
-                    <button class="ButtonSubBar Button1" onclick= "document.getElementById('Switch').scrollIntoView();">Switch</button>
-                    <button class="ButtonSubBar Button1" onclick= "document.getElementById('Overgrown').scrollIntoView();"> Overgrown</button>
-                    <button class="ButtonSubBar Button1"onclick=""> ExamenProject </button>
-                    <button class="ButtonSubBar Button1"onclick="document.getElementById('EndlessRunner').scrollIntoView();"> Endless Runner </button>
-                </div>
+        <div class="SubBar" id="SubBar">
+            <hr id="SubBarLine" style=" margin: 0"/>
+            <div class="VerticalCenter" style="top: auto; padding-top: 35px;">
+                <button class="ButtonSubBar Button1"onclick= "document.getElementById('Malaga').scrollIntoView();">Malaga Jam</button>
+                <button class="ButtonSubBar Button1" onclick= "document.getElementById('Switch').scrollIntoView();">Switch</button>
+                <button class="ButtonSubBar Button1" onclick= "document.getElementById('Overgrown').scrollIntoView();"> Overgrown</button>
+                <button class="ButtonSubBar Button1"onclick=""> ExamenProject </button>
+                <button class="ButtonSubBar Button1"onclick="document.getElementById('EndlessRunner').scrollIntoView();"> Endless Runner </button>
             </div>
+        </div>
             
-                <!-- <div style= "grid-column: 3/6; padding-top: 50px; padding-bottom: 50px;">
-                    <p2>
-                        Whilst on an educational school which only a select few students were chosen for, 
-                        I participated in the global game jam in Malaga Spain. We had 3 days to make and develop a game with the theme repair.
-                    </p2>
-                    &nbsp
-                    <p2>
-                        Together with my group we came up with the idea to create a game about fixing tattoos. 
-                        In this game I manly worked on making the dialog mechanic at the start of the game where it chooses a random set of dialog which will then determine which tattoo you will be fixing.
-                    </p2>
-                    &nbsp
-                    <p2>
-                        I also added a fade to the screen and added the animations in game. I also worked a bit on the timer and on the slider which measures how much you are hurting the customer. 
-                    </p2>
-                </div> -->
-
-
+        <div class="GridContainer">
                 <video class="image" id="Switch" controls poster="..\ImagesProjects\SwitchBackgroundWebsite.png">
                     <source src="..\Videos\Switch gameplay.mp4" style="z-index: 1">
                 </video>
@@ -143,7 +139,7 @@
                         <h2 style="padding-left: 30vh;">OVERGROWN</h2>
                     </div>
                 </div> -->
-<!-- 
+                <!-- 
                 <img src="..\ImagesProjects\EndlessRunnerBackground.png" id="EndlessRunner" class="image" style="padding-top: 5vh; width: 100%;  height: 90%; grid-row: 9/9; grid-column: 1/8;">
 
                 <div class="GrindContent" style=" grid-column: 3/-1; grid-row: auto">
