@@ -8,26 +8,16 @@
     <title>Max Lichtneker Portfolio</title>
     </script>
 
+    <script src="..\Website\WebsiteScripts.js"></script>
+
     <script type="text/javascript" >
-        
-        var previousScrollPos = window.pageYOffset;
-        window.onscroll = function(){
-            var currentScrollPos = window.pageYOffset;
-
-            if(previousScrollPos > currentScrollPos){
-               document.getElementById("SubBar").style.top = "75px"; 
-            }else{
-                document.getElementById("SubBar").style.top = "-80px";
-            }
-            previousScrollPos = currentScrollPos;
-        }
-
         function dynamicHeight(){
         $('#content').css("margin-top", $('#fix').height());
         }
 
         $(document).ready(dynamicHeight);
     </script>
+
 <style>
     html{
     scroll-behavior: smooth;
@@ -48,115 +38,70 @@
 
         <div class="SubBar" id="SubBar">
             <hr id="SubBarLine" style=" margin: 0"/>
-            <div class="VerticalCenter" style="top: auto; padding-top: 35px;">
-                <button class="ButtonSubBar Button1"onclick= "document.getElementById('Malaga').scrollIntoView();">Malaga Jam</button>
-                <button class="ButtonSubBar Button1" onclick= "document.getElementById('Switch').scrollIntoView();">Switch</button>
-                <button class="ButtonSubBar Button1" onclick= "document.getElementById('Overgrown').scrollIntoView();"> Overgrown</button>
+            <div class="VerticalCenter" style="top: auto; padding-top: 35px;" id="ProjectList">
+                <button class="ButtonSubBar Button1"onclick= "CurrentSlide(1)">Malaga Jam</button>
+                <button class="ButtonSubBar Button1" onclick= "CurrentSlide(2)">Switch</button>
+                <button class="ButtonSubBar Button1" id="Button" onclick= "CurrentSlide(3)"> Overgrown</button>
                 <button class="ButtonSubBar Button1"onclick=""> ExamenProject </button>
-                <button class="ButtonSubBar Button1"onclick="document.getElementById('EndlessRunner').scrollIntoView();"> Endless Runner </button>
+                <button class="ButtonSubBar Button1"onclick="CurrentSlide(4)"> Endless Runner </button>
             </div>
         </div>
             
-        <div class="GridContainer">
-                <video class="image" id="Switch" controls poster="..\ImagesProjects\SwitchBackgroundWebsite.png">
-                    <source src="..\Videos\Switch gameplay.mp4" style="z-index: 1">
-                </video>
-
-                <div style= "grid-column: 3/6; grid-row: auto;">
-                    <h2>Switch</h2>
-                    <p2>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quibusdam sint ipsa id illo repellendus placeat veritatis, assumenda nobis voluptatem officiis tenetur aspernatur corporis vitae possimus facere odit ducimus exercitationem!
-                    </p2>
-                </div>
-
-                
-                <img src="..\ImagesProjects\SwitchScreenshot.png" style="grid-column: 3/4; grid-row: auto; width: 65vh; height: 100%;padding-top: 40px;">
-                <img src="..\ImagesProjects\SwitchScreenshot2.png" style="grid-column: 5/6; grid-row: auto; width: 65vh; height: 100%; padding-right: 20px; padding-top: 40px;">
-
-
-                <div class="TitleBar" id="Overgrown">
-                    <h2>Overgrown</h2>
-                </div>
-
-                <video id="Overgrown" class="image" controls style>
-                    <source src="..\Videos\Overgrown Trailer-720p-1695042157.mp4" style="z-index: 2;">
-                </video>
-
-                <div style= "grid-column: 3/6; grid-row: auto;">
-                    <p2>
-                        For this school project I worked with 3 others to make a game that we would publish on Itch.io. 
-                    </p2>
-                    &nbsp
-                    <p2>
-                        We came up with a simple farming game where the world was overgrown by plants, plants all grew faster so your crops would grow faster than they normally would. 
-                        I worked on the plant growth mechanics and collecting mechanics as well as adding animations to the player and the enemy character, 
-                        I also made the enemy mechanics and the punching mechanics for the player. 
-                    </p2>
-                    &nbsp
-                    <p2>
-                        I worked together with: Bouke Weel the other dev and 2 artists: Anne Roos Leeuwis and Floor van den Bank. 
-                    </p2>
-                </div>
-
-                <img src="..\ImagesProjects\OvergownDay.png" style="grid-row: auto; grid-column: 3/4; width: 65vh; height: 100%; padding-right: 20px; padding-top: 40px;">
-                <img src="..\ImagesProjects\OvergownNIght.png" style="grid-row: auto; grid-column: 5/6; width: 65vh; height: 100%; padding-top: 40px;">
-
-                
-                <div class="TitleBar" id="EndlessRunner">
-                    <h2>Endless runner</h2>
-                </div>
-
-                <video class="image" id="Switch" controls poster="..\ImagesProjects\EndlessRunnerBackground.png">
-                    <source src="..\Videos\Buildv2.0 2022.11.19 - 19.01.37.04.mp4" style="z-index: 1">
-                </video>
-
-                <div style= "grid-column: 3/6; grid-row: auto;">
-                    <h2>EndlessRunner</h2>
-                    <p2>
-                        This is a solo project I had to work on at school where we had to build an endless runner.
-                        The twist for this project is that we had to make all the art ourselves, 
-                        everything you see in this project was made by me. 
-                    </p>
-                    &nbsp
-                    <p2>
-                        I chose for the theme of space cause I’m a big Sci-fi fan. 
-                        I was really motivated for this project so I decided to add multiplayer to the game as well cause we were learning how to do that at the same time.
-                    </p2>
-                </div>
-
-                <img src="..\ImagesProjects\EndlessRunnerScreen_1.png" style="grid-row: auto; grid-column: 3/4; width: 65vh; height: 100%; padding-right: 20px; padding-top: 40px;">
-                <img src="..\ImagesProjects\EndlessRunnerScreen_2.png" style="grid-row: auto; grid-column: 5/6; width: 65vh; height: 100%; padding-right: 20px; padding-top: 40px;">
-
-
-                <!-- <div class="GreyBackground"></div> -->
-                <!-- <div class="GrindContent" style=" grid-column: 3/-1; grid-row: 6">
-
-                    <video class="GrindContent" controls>
-                        <source src="..\Videos\Overgrown Trailer-720p-1695042157.mp4" style="z-index: 2">
-                    </video>
-
-                    <div class="GrindContent" style=" grid-column: 2/-1;">
-                        <h2 style="padding-left: 30vh;">OVERGROWN</h2>
-                    </div>
-                </div> -->
-                <!-- 
-                <img src="..\ImagesProjects\EndlessRunnerBackground.png" id="EndlessRunner" class="image" style="padding-top: 5vh; width: 100%;  height: 90%; grid-row: 9/9; grid-column: 1/8;">
-
-                <div class="GrindContent" style=" grid-column: 3/-1; grid-row: auto">
-
-                    <video class="GrindContent" controls style="border: none;">
-                        <source src="..\Videos\Buildv2.0 2022.11.19 - 19.01.37.04.mp4" style="z-index: 1">
-                    </video>
-
-                    <div class="GrindContent" style=" grid-column: 2/-1;">
-                        <h2 style="padding-left: 30vh;">Endless runner</h2>
-                    </div>
-                </div> -->
-
+        <div class="Slideshow-container">
+            <div class="mySlides">
+                <img src="..\ImagesProjects\MalagaJamImage_1.webp" style="width: 100%; height: 100%;">
             </div>
 
-        </div> 
+            <div class="mySlides">
+                <div class="GridContainer">
+                    <video class="image" id="Switch" controls poster="..\ImagesProjects\SwitchBackgroundWebsite.png">
+                    <source src="..\Videos\Switch gameplay.mp4" style="z-index: 1">
+                    </video>
 
+                    <p2 style = "grid-row: auto; grid-column: 3/3;">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quibusdam sint ipsa id illo repellendus placeat veritatis, assumenda nobis voluptatem officiis tenetur aspernatur corporis vitae possimus facere odit ducimus exercitationem!
+                    </p2>
+                    
+                    <img src="..\ImagesProjects\SwitchScreenshot.png" style="grid-row: 3;grid-column: 3/4; width: 65vh; height: 100%;padding-top: 40px;">
+                    <img src="..\ImagesProjects\SwitchScreenshot2.png" style="grid-row: 3;grid-column: 5/5;width: 65vh; height: 100%; padding-right: 10px; padding-top: 40px;">
+                </div>
+            </div>
+
+            <div class="mySlides">
+                <div class="GridContainer">
+                    <video class="image" id="Overgrown" controls style>
+                        <source src="..\Videos\Overgrown Trailer-720p-1695042157.mp4" style="z-index: 2;">
+                    </video>
+
+                    <div style= "grid-column: 3/6; grid-row: auto;">
+                        <p2>
+                            For this school project I worked with 3 others to make a game that we would publish on Itch.io. 
+                        </p2>
+                        &nbsp
+                        <p2>
+                            We came up with a simple farming game where the world was overgrown by plants, plants all grew faster so your crops would grow faster than they normally would. 
+                            I worked on the plant growth mechanics and collecting mechanics as well as adding animations to the player and the enemy character, 
+                            I also made the enemy mechanics and the punching mechanics for the player. 
+                        </p2>
+                        &nbsp
+                        <p2>
+                            I worked together with: Bouke Weel the other dev and 2 artists: Anne Roos Leeuwis and Floor van den Bank. 
+                        </p2>
+                    </div>
+
+                    <img src="..\ImagesProjects\OvergownDay.png" style="grid-row: 3;grid-column: 3/4; width: 65vh; height: 100%; padding-right: 20px; padding-top: 40px;">
+                    <img src="..\ImagesProjects\OvergownNIght.png" style="grid-row: 3;grid-column: 5/5; width: 65vh; height: 100%; padding-top: 40px;">
+                </div>
+            </div>
+
+            <div class="mySlides">
+
+                <h2>Endless runner</h2>
+                <video controls style="border: none;">
+                    <source src="..\Videos\Buildv2.0 2022.11.19 - 19.01.37.04.mp4" style="z-index: 1">
+                </video>
+            </div>
+        </div> 
     </body>
 </head>
 
