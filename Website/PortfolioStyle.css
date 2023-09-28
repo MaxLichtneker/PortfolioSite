@@ -38,7 +38,7 @@ p3{
 
 }
 
-/* button style */
+/* || button style */
 .Button{
     font-size: 1.1rem;
     font-weight: 700;
@@ -93,7 +93,12 @@ p3{
     background-color: #82A0B6;
 }
 
-/* button that scrolls to the bottom of the screen*/
+.DropDownButton{
+    border-radius: 4px;
+    width: 100%;
+    text-align: start;
+}
+
 button.ScrollDownButton{
     background-color: #353535;
     color: #E0E0E0;
@@ -104,7 +109,9 @@ button.ScrollDownButton{
 button.ScrollDownButton1:hover~#hr-nav{
     border: 1px solid #82A0B6;
 }
+/* … */
 
+/* || Containers */
 .container{
     width: 100%;
     height: 60rem;
@@ -155,8 +162,9 @@ button.ScrollDownButton1:hover~#hr-nav{
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+/* … */
 
-/* style for the taskbar at the top of the screen */
+/* Task bars */
 .TaskBar{
     position: fixed;
 
@@ -196,6 +204,7 @@ button.ScrollDownButton1:hover~#hr-nav{
 
     margin-bottom: 1vh;
 }
+/* … */
 
 /* container for the contact area of the homepage */
 .Contact{
@@ -304,36 +313,100 @@ padding: 3px;
 
 .GridContainer{
     display: grid;
-    grid-template-columns:fit-content(100%)  repeat(6, 1fr);
+    grid-template-columns: fit-content(80%) repeat(6, 1fr);
     grid-template-rows: fit-content(1) repeat(1, 1fr);
 
     grid-area: auto;
-
     margin: 0 auto;
+    
 }
 
 .image{
 
-    grid-column: 3/8; 
+    grid-column: 2/8; 
     width: 90%; 
     padding-bottom: 20px;
-    grid-row: auto; 
+    grid-row: 2; 
+    padding-left: 100px;
 }
 
 .GrindContent{
-
-    align-self:center;
-    height: 50vh;
-    padding-left: 12vh;
+    display:inline-block;
+    text-align: left;
+    padding-left: 100px;
 }
 
 .SlideShow-Container{
     max-width: 1000px;
     max-height: 1000px;
     position: relative;
-    margin: auto
+    margin: auto;
 }
 
 .mySlides{
     display: none;
+    text-align: center;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: fixed;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+.DropDown{
+    position: relative;
+    display: inline-block;
+    grid-row: 4;
+    grid-column: 2/7;
+    padding-left: 100px;
+}
+
+.DropDownContent{
+    display: none;
+    position: relative;
+    background-color: #424242;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: start;
+}
+
+.CodeBackground{
+    border-radius: 4px;
+    background-color: #1d1f2191;;
+    position: relative;
+    font-family: Menlo,Bitstream Vera Sans Mono,DejaVu Sans Mono,Monaco,Consolas,monospace;
+    resize: none;
+
+    right: 16%;
+    color: #E0E0E0;
+    width: 1000px;
+    border: none;
+    text-align: start;
+
+    float: left;
+}
+
+.Rotated{
+    transform: rotate(45deg);
 }

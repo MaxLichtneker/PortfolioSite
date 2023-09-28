@@ -16,10 +16,15 @@ window.onscroll = function(){
 //
 
 let slideIndex = 1;
+
 ShowSlides(slideIndex);
 
 function CurrentSlide(n){
     ShowSlides(slideIndex = n);
+}
+
+function NextSlide(n){
+    ShowSlides(slideIndex += n)
 }
 
 function ShowSlides(n){
@@ -35,9 +40,25 @@ function ShowSlides(n){
     }
 
     for(i = 0; i < slides.length; i++){
+
         slides[i].style.display = "none";
     }
 
+
     slides[slideIndex-1].style.display = "Block";
 }
+
+function ShowDropDown(){
+
+    if(document.getElementById("DropDown").style.display == "none"){
+        document.getElementById("DropDown").style.display = "block";
+        
+        document.getElementById("Rotated").style.transform = "rotate(45deg)";
+    }
+    else{
+        document.getElementById("DropDown").style.display = "none";
+        document.getElementById("Rotated").style.transform = "rotate(0)";
+    }
+}
+
 
