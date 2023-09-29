@@ -30,6 +30,7 @@ function NextSlide(n){
 function ShowSlides(n){
     let i;
     let slides = document.getElementsByClassName("mySlides");
+    let buttons = document.getElementsByClassName("ButtonSubBar");
 
     if(n > slides.length){
         slideIndex = 1;
@@ -42,10 +43,12 @@ function ShowSlides(n){
     for(i = 0; i < slides.length; i++){
 
         slides[i].style.display = "none";
+        buttons[i].style.textDecoration = "none";
     }
 
-
+    
     slides[slideIndex-1].style.display = "Block";
+    buttons[slideIndex-1].style.textDecoration = "underline";
 }
 
 function ShowDropDown(){
@@ -53,12 +56,13 @@ function ShowDropDown(){
     if(document.getElementById("DropDown").style.display == "none"){
         document.getElementById("DropDown").style.display = "block";
         
+        //rotate + symbol
         document.getElementById("Rotated").style.transform = "rotate(45deg)";
     }
     else{
         document.getElementById("DropDown").style.display = "none";
+
+        //rotate x symbol
         document.getElementById("Rotated").style.transform = "rotate(0)";
     }
 }
-
-

@@ -39,11 +39,11 @@
         <div class="SubBar" id="SubBar">
             <hr id="SubBarLine" style=" margin: 0"/>
             <div class="VerticalCenter" style="top: auto; padding-top: 35px;" id="ProjectList">
-                <button class="ButtonSubBar Button1"onclick= "CurrentSlide(1)">Malaga Jam</button>
-                <button class="ButtonSubBar Button1" onclick= "CurrentSlide(2)">Switch</button>
-                <button class="ButtonSubBar Button1" id="Button" onclick= "CurrentSlide(3)"> Overgrown</button>
-                <button class="ButtonSubBar Button1"onclick=""> ExamenProject </button>
-                <button class="ButtonSubBar Button1"onclick="CurrentSlide(4)"> Endless Runner </button>
+                <button id="ProjectButton" class="ButtonSubBar Button1"onclick= "CurrentSlide(1);">Malaga Jam</button>
+                <button id="ProjectButton" class="ButtonSubBar Button1" onclick= "CurrentSlide(2);">Switch</button>
+                <button id="ProjectButton" class="ButtonSubBar Button1" id="Button" onclick= "CurrentSlide(3);"> Overgrown</button>
+                <button id="ProjectButton" class="ButtonSubBar Button1"onclick="CurrentSlide(4);"> ExamenProject </button>
+                <button id="ProjectButton" class="ButtonSubBar Button1"onclick="CurrentSlide(5)"> Endless Runner </button>
             </div>
         </div>
             
@@ -59,9 +59,9 @@
 
                 <div class="GridContainer">
 
-                    <img src="..\ImagesProjects\MalagaJamImage_1.webp" class="image">
+                    <img src="..\ImagesProjects\FixMyTattoo_Gif_1.gif" class="image">
 
-                    <div style= "grid-column: 2/5; grid-row: 3;">
+                    <div class="GridText">
                         <p2>
                             Whilst on an educational school which only a select few students were chosen for, I participated in the global game jam in Malaga Spain. 
                             We had 3 days to make and develop a game with the theme repair. 
@@ -92,7 +92,7 @@
                     <source src="..\Videos\Switch gameplay.mp4" style="z-index: 1">
                     </video>
 
-                    <p2 style = "grid-row: 3; grid-column: 2/3;">
+                    <p2 class="GridText">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quibusdam sint ipsa id illo repellendus placeat veritatis, assumenda nobis voluptatem officiis tenetur aspernatur corporis vitae possimus facere odit ducimus exercitationem!
                     </p2>
                     
@@ -112,7 +112,7 @@
                         <source src="..\Videos\Overgrown Trailer-720p-1695042157.mp4" style="z-index: 2;">
                     </video>
 
-                    <div class="GrindContent" style= "grid-column: 2/4; grid-row: 3;">
+                    <div class="GridText">
                         <p2>
                             For this school project I worked with 3 others to make a game that we would publish on Itch.io. 
                         </p2>
@@ -127,7 +127,6 @@
                             I worked together with: Bouke Weel the other dev and 2 artists: Anne Roos Leeuwis and Floor van den Bank. 
                         </p2>
                     </div>
-
                     <div class="DropDown">
                         <button onclick="ShowDropDown()" class="DownloadButton DropDownButton DownloadButton1">
                            <div style="float: left;">&lt;/&gt; Code snippit</div>
@@ -168,6 +167,9 @@
                 </div>
             </div>
 
+            <!-- Examen project -->
+            <div class="mySlides"></div>
+
             <!-- Endless runner slide -->
             <div class="mySlides">
 
@@ -178,13 +180,13 @@
                         <source src="..\Videos\Buildv2.0 2022.11.19 - 19.01.37.04.mp4" style="z-index: 1">
                     </video>
 
-                    <div class="GrindContent" style= "grid-column: 3/6; grid-row: 3;">
+                    <div class="GridText">
                         <p2>
                             This is a solo project I had to work on at school where we had to build an endless runner. 
                             The twist for this project is that we had to make all the art ourselves.
                         </p2>
                         &nbsp
-                        <p>
+                        <p2>
                             I chose for the theme of space cause I’m a big Sci-fi fan.
                             I was really motivated for this project so I decided to add multiplayer to the game as well cause we were learning how to do that at the same time.
                         </p2>

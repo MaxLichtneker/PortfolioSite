@@ -35,7 +35,6 @@ p2{
 p3{
     color: #284B63;
     font-size: 1.4rem;
-
 }
 
 /* || button style */
@@ -313,7 +312,7 @@ padding: 3px;
 
 .GridContainer{
     display: grid;
-    grid-template-columns: fit-content(80%) repeat(6, 1fr);
+    grid-template-columns: fit-content(100%) repeat(6, 1fr);
     grid-template-rows: fit-content(1) repeat(1, 1fr);
 
     grid-area: auto;
@@ -330,10 +329,14 @@ padding: 3px;
     padding-left: 100px;
 }
 
-.GrindContent{
-    display:inline-block;
-    text-align: left;
+.GridText{
+    grid-column: 2/6; 
+    grid-row: 3;
     padding-left: 100px;
+}
+
+.GrindContent{
+
 }
 
 .SlideShow-Container{
@@ -361,16 +364,16 @@ padding: 3px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-  }
+}
   
-  .next {
+.next {
     right: 0;
     border-radius: 3px 0 0 3px;
-  }
+}
   
-  .prev:hover, .next:hover {
+.prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
-  }
+}
 
 .DropDown{
     position: relative;
@@ -405,8 +408,4 @@ padding: 3px;
     text-align: start;
 
     float: left;
-}
-
-.Rotated{
-    transform: rotate(45deg);
 }
