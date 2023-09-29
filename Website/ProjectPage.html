@@ -59,11 +59,11 @@
 
                 <div class="GridContainer">
 
-                    <img src="..\ImagesProjects\FixMyTattoo_Gif_1.gif" class="image">
+                    <img src="..\ImagesProjects\MalagaJam\FixMyTattoo_Gif_1.gif" class="image">
 
                     <div class="GridText">
                         <p2>
-                            Whilst on an educational school which only a select few students were chosen for, I participated in the global game jam in Malaga Spain. 
+                            Whilst on an educational school trip which only a select few students were chosen for, I participated in the global game jam in Malaga Spain. 
                             We had 3 days to make and develop a game with the theme repair. 
                         </p2>
                         &nbsp
@@ -78,8 +78,8 @@
                         </p2>
                     </div>
 
-                    <img src="..\ImagesProjects\MalagaJam_Gif_2.gif" class="GridContent">
-                    <img src="..\ImagesProjects\OvergownNIght.png" class="GridContent GridContent2">
+                    <img src="..\ImagesProjects\MalagaJam\MalagaJam_Gif_2.gif" class="GridContent">
+                    <img src="..\ImagesProjects\MalagaJam\MalagaJam_Screen_1.png" class="GridContent GridContent2">
 
                 </div>
             </div>
@@ -99,8 +99,20 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quibusdam sint ipsa id illo repellendus placeat veritatis, assumenda nobis voluptatem officiis tenetur aspernatur corporis vitae possimus facere odit ducimus exercitationem!
                     </p2>
                     
-                    <img src="..\ImagesProjects\SwitchScreenshot.png" style="grid-row: 4;grid-column: 2/3; width: 65vh; height: 100%;padding-top: 40px;">
-                    <img src="..\ImagesProjects\SwitchScreenshot2.png" style="grid-row: 4;grid-column: 4/4;width: 65vh; height: 100%; padding-right: 10px; padding-top: 40px;">
+                    <div class="DropDown">
+                        <button onclick="ShowDropDown('DropDown_Switch','RotatedSwitch')" class="DownloadButton DropDownButton DownloadButton1">
+                           <div style="float: left;">&lt;/&gt; Blueprint snippit</div>
+                           <div style="float: right; transition: .5s;" id="RotatedSwitch">+</div>
+                        </button>
+
+                        <div id="DropDown_Switch" class="DropDownContent">
+                            <div style="float: right;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <img src="..\ImagesProjects\Switch\SwitchScreenshot.png" class="GridContent">
+                    <img src="..\ImagesProjects\Switch\SwitchScreenshot2.png"class="GridContent GridContent2">
                 </div>
             </div>
 
@@ -127,16 +139,20 @@
                         </p2>
                         &nbsp
                         <p2>
+                            Check out the game on Itch.io <a href="https://frozen-chicken-nuggies.itch.io/overgrown" style="color:antiquewhite;">here!</a>
+                        </p2>
+                        &nbsp
+                        <p2>
                             I worked together with: Bouke Weel the other dev and 2 artists: Anne Roos Leeuwis and Floor van den Bank. 
                         </p2>
                     </div>
                     <div class="DropDown">
-                        <button onclick="ShowDropDown()" class="DownloadButton DropDownButton DownloadButton1">
+                        <button onclick="ShowDropDown('DropDown_Overgrown', 'RotatedOvergrown')" class="DownloadButton DropDownButton DownloadButton1">
                            <div style="float: left;">&lt;/&gt; Code snippit</div>
-                           <div style="float: right; transition: .5s;" id="Rotated">+</div>
+                           <div style="float: right; transition: .5s;" id="RotatedOvergrown">+</div>
                         </button>
 
-                        <div id="DropDown" class="DropDownContent">
+                        <div id="DropDown_Overgrown" class="DropDownContent">
                            <p2>GrowPlant function:</p2>
                             <textarea readonly rows="20" cols="20" class="CodeBackground">
                             1. //turns on the new sprite and turns the older one off
@@ -159,14 +175,14 @@
                             </textarea>
 
                             <div style="float: right;">
-                                <img src="..\ImagesProjects\GrowingCrop.gif" style="padding-right: 100px; width: 300px;">
+                                <img src="..\ImagesProjects\OverGrown\GrowingCrop.gif" style="padding-right: 100px; width: 300px;">
                             </div>
 
                         </div>
                     </div>
 
-                    <img src="..\ImagesProjects\OvergownDay.png" style="grid-row: 5;grid-column: 3/3; width: 65vh; height: 100%;padding-top: 40px;">
-                    <img src="..\ImagesProjects\OvergownNIght.png" style="grid-row: 5;grid-column: 5/6; width: 65vh; height: 100%; padding-top: 40px;">
+                    <img src="..\ImagesProjects\OverGrown\OvergownDay.png" class="GridContent">
+                    <img src="..\ImagesProjects\OverGrown\OvergownNIght.png" class="GridContent GridContent2">
                 </div>
             </div>
 
@@ -176,13 +192,13 @@
             <!-- Endless runner slide -->
             <div class="mySlides">
 
-                <h2 style="text-align: center; padding-top: 50px;">Overgrown</h2>
+                <h2 style="text-align: center; padding-top: 50px;">Endless Runner</h2>
 
                 <div class="GridContainer">
                     <video class="image controls style="border: none; controls>
                         <source src="..\Videos\Buildv2.0 2022.11.19 - 19.01.37.04.mp4" style="z-index: 1">
                     </video>
-
+                    
                     <div class="GridText">
                         <p2>
                             This is a solo project I had to work on at school where we had to build an endless runner. 
@@ -194,6 +210,42 @@
                             I was really motivated for this project so I decided to add multiplayer to the game as well cause we were learning how to do that at the same time.
                         </p2>
                     </div>
+
+                    <div class="DropDown">
+                        <button onclick="ShowDropDown('DropDownEndless','RotatedEndless')" class="DownloadButton DropDownButton DownloadButton1">
+                           <div style="float: left;">&lt;/&gt; Code snippit</div>
+                           <div style="float: right; transition: .5s;" id="RotatedEndless">+</div>
+                        </button>
+
+                        <div id="DropDownEndless" class="DropDownContent">
+                           <p2>GrowPlant function:</p2>
+                            <textarea readonly rows="20" cols="20" class="CodeBackground">
+                            1. //turns on the new sprite and turns the older one off
+                            2. private void GrowPlant()
+                            3. {
+                            4.     if(growthDuration <= 0 && fullyGrown == false)
+                            5.     {
+                            6.         plantSprite.sprite = null;
+                            7.
+                            8.         arrayIndex++;
+                            9. 
+                            10.         plantSprite.sprite = plantData.growthSprites[arrayIndex];
+                            11.     }
+                            12.     else if(arrayIndex == plantData.growthSprites.Length - 1)
+                            13.     {
+                            14.         cropState = CropState.dead;
+                            15.         fullyGrown = true;
+                            16.     }
+                            17. }
+                            </textarea>
+
+                            <div style="float: right;">
+                                <img src="..\ImagesProjects\OverGrown\GrowingCrop.gif" style="padding-right: 100px; width: 300px;">
+                            </div>
+
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div> 

@@ -51,18 +51,18 @@ function ShowSlides(n){
     buttons[slideIndex-1].style.textDecoration = "underline";
 }
 
-function ShowDropDown(){
+function ShowDropDown(DropDownId,RotateId){
 
-    if(document.getElementById("DropDown").style.display == "none"){
-        document.getElementById("DropDown").style.display = "block";
+    if(document.getElementById(DropDownId).style.display == "none"){
+        document.getElementById(DropDownId).style.display = "block";
         
         //rotate + symbol
-        document.getElementById("Rotated").style.transform = "rotate(45deg)";
+        document.getElementById(RotateId).style.transform = "rotate(45deg)";
     }
     else{
-        document.getElementById("DropDown").style.display = "none";
+        document.getElementById(DropDownId).style.display = "none";
 
         //rotate x symbol
-        document.getElementById("Rotated").style.transform = "rotate(0)";
+        document.getElementById(RotateId).style.transform = "rotate(0)";
     }
 }
