@@ -51,7 +51,7 @@ function ShowSlides(n){
     buttons[slideIndex-1].style.textDecoration = "underline";
 }
 
-function ShowDropDown(DropDownId,RotateId){
+function ShowDropDown(DropDownId, RotateId){
 
     if(document.getElementById(DropDownId).style.display == "none"){
         document.getElementById(DropDownId).style.display = "block";

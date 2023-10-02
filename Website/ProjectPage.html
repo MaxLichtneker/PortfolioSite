@@ -139,44 +139,57 @@
                         </p2>
                         &nbsp
                         <p2>
-                            Check out the game on Itch.io <a href="https://frozen-chicken-nuggies.itch.io/overgrown" style="color:antiquewhite;">here!</a>
+                            Check out the game on Itch.io <a href="https://frozen-chicken-nuggies.itch.io/overgrown" target="_blank" style="color:antiquewhite;">here!</a>
                         </p2>
                         &nbsp
                         <p2>
                             I worked together with: Bouke Weel the other dev and 2 artists: Anne Roos Leeuwis and Floor van den Bank. 
                         </p2>
                     </div>
+
                     <div class="DropDown">
                         <button onclick="ShowDropDown('DropDown_Overgrown', 'RotatedOvergrown')" class="DownloadButton DropDownButton DownloadButton1">
-                           <div style="float: left;">&lt;/&gt; Code snippit</div>
+                           <div style="float: left;">&lt;/&gt; Code snippits</div>
                            <div style="float: right; transition: .5s;" id="RotatedOvergrown">+</div>
                         </button>
 
                         <div id="DropDown_Overgrown" class="DropDownContent">
-                           <p2>GrowPlant function:</p2>
-                            <textarea readonly rows="20" cols="20" class="CodeBackground">
-                            1. //turns on the new sprite and turns the older one off
-                            2. private void GrowPlant()
-                            3. {
-                            4.     if(growthDuration <= 0 && fullyGrown == false)
-                            5.     {
-                            6.         plantSprite.sprite = null;
-                            7.
-                            8.         arrayIndex++;
-                            9. 
-                            10.         plantSprite.sprite = plantData.growthSprites[arrayIndex];
-                            11.     }
-                            12.     else if(arrayIndex == plantData.growthSprites.Length - 1)
-                            13.     {
-                            14.         cropState = CropState.dead;
-                            15.         fullyGrown = true;
-                            16.     }
-                            17. }
-                            </textarea>
+                            <div class="GridContainerCodeSnippet">
+                                <p2 style="grid-row: 1; "><b>GrowPlant function:</b></p2>
+                                <textarea readonly rows="18"class="CodeBackground">
+                                1. //turns on the new sprite and turns the older one off
+                                2. private void GrowPlant()
+                                3. {
+                                4.     if(growthDuration <= 0 && fullyGrown == false)
+                                5.     {
+                                6.         plantSprite.sprite = null;
+                                7.
+                                8.         arrayIndex++;
+                                9. 
+                                10.         plantSprite.sprite = plantData.growthSprites[arrayIndex];
+                                11.     }
+                                12.     else if(arrayIndex == plantData.growthSprites.Length - 1)
+                                13.     {
+                                14.         cropState = CropState.dead;
+                                15.         fullyGrown = true;
+                                16.     }
+                                17. }
+                                </textarea>
 
-                            <div style="float: right;">
-                                <img src="..\ImagesProjects\OverGrown\GrowingCrop.gif" style="padding-right: 100px; width: 300px;">
+                                <div style="float: right; grid-row: 2;">
+                                    <img src="..\ImagesProjects\OverGrown\GrowingCrop.gif" style="width: 300px; padding-right: 125px; padding-top: 50px;">
+                                </div>  
+
+                                <p2 style="grid-row: 3; ">
+                                    In this function I grow the plant by setting the current sprite to null
+                                    and then increasing the value of the array index. 
+                                </p2>
+                                <p2 style="grid-row: 4; padding-top: 10px;">
+                                    I then set the plantSprite variable to the sprite given in the scriptable object with the right array index,
+                                    to switch to the next sprite of the plant.
+                                </p2>
                             </div>
+                       
 
                         </div>
                     </div>
@@ -213,39 +226,49 @@
 
                     <div class="DropDown">
                         <button onclick="ShowDropDown('DropDownEndless','RotatedEndless')" class="DownloadButton DropDownButton DownloadButton1">
-                           <div style="float: left;">&lt;/&gt; Code snippit</div>
+                           <div style="float: left;">&lt;/&gt; Code snippits</div>
                            <div style="float: right; transition: .5s;" id="RotatedEndless">+</div>
                         </button>
+                            <div id="DropDownEndless" class="DropDownContent">
+                                <div class="GridContainerCodeSnippet">
+                                    <p2 style="grid-row: 1;"><b>ChunkLoader function:</b></p2>
+                                    <textarea readonly rows="18s" cols="20" class="CodeBackground">
+                                    1.
+                                    2.
+                                    3. 
+                                    4.    
+                                    5.
+                                    6.
+                                    7.
+                                    8.
+                                    9.
+                                    10.       
+                                    11. 
+                                    12. 
+                                    13.    
+                                    14.
+                                    15.
+                                    16.
+                                    17.
+                                    </textarea>
 
-                        <div id="DropDownEndless" class="DropDownContent">
-                           <p2>GrowPlant function:</p2>
-                            <textarea readonly rows="20" cols="20" class="CodeBackground">
-                            1. //turns on the new sprite and turns the older one off
-                            2. private void GrowPlant()
-                            3. {
-                            4.     if(growthDuration <= 0 && fullyGrown == false)
-                            5.     {
-                            6.         plantSprite.sprite = null;
-                            7.
-                            8.         arrayIndex++;
-                            9. 
-                            10.         plantSprite.sprite = plantData.growthSprites[arrayIndex];
-                            11.     }
-                            12.     else if(arrayIndex == plantData.growthSprites.Length - 1)
-                            13.     {
-                            14.         cropState = CropState.dead;
-                            15.         fullyGrown = true;
-                            16.     }
-                            17. }
-                            </textarea>
+                                    <div style="float: right; grid-row: 2;">
+                                        <img src="..\ImagesProjects\EndlessRunner\EndlessRunner_CodeSnippet_gif_1.gif" style="height: 100px; width: 200px;">
+                                    </div>  
+                                    
+                                    <p2 style="grid-row: 3;";>in the first function I activate a random child of the parent gameobject of chunkloader. 
+                                        In the second function once the chunkloader moves past it’s maximum range it gets set back 
+                                        to it’s original position and activates a new random child of the parent
+                                    </p2>
 
-                            <div style="float: right;">
-                                <img src="..\ImagesProjects\OverGrown\GrowingCrop.gif" style="padding-right: 100px; width: 300px;">
+                                </div>
                             </div>
-
                         </div>
                     </div>
 
+                    <img src="..\ImagesProjects\EndlessRunner\EndlessRunner_gif_1.gif" class="GridContent">
+                    <img src="..\ImagesProjects\EndlessRunner\EndlessRunner_gif_2.gif" class="GridContent GridContent2">
+                    
                 </div>
             </div>
         </div> 
