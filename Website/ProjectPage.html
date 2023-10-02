@@ -200,7 +200,31 @@
             </div>
 
             <!-- Examen project -->
-            <div class="mySlides"></div>
+            <div class="mySlides">
+                <h2 style="text-align: center; padding-top: 50px;">Exam Project</h2>
+
+                <div class="GridContainer">
+                    <video class="image controls style="border: none; controls>
+                        <source src="..\Videos\GameplayFilmpje(19-05-2022).mp4" style="z-index: 1">
+                    </video>
+                    
+                    <div class="GridText">
+                      <p2>
+                            This was the last project I worked on at the Grafisch Lyceum Utrecht. 
+                      </p2>
+                      &nbsp
+                      <p2>
+                            It was a solo project where we were given multiple different assets to make a game with.
+                            I chose a pack which had a bank heist theme so my game revolved around that aspect. We had to come up with 3 different mechanics and dynamics which we had to document thoroughly.
+                      </p2>  
+                      &nbsp
+                      <p2>
+                            The goal of my game was quite simple, rob the bank. You had about 2 minute's to get in and out, at the same time the police would be raiding the building and be an obstacle for the player. 
+                            The more money you were able to steal the higher the score at the end of the game.
+                      </p2>
+                    </div>
+                </div>
+            </div>
 
             <!-- Endless runner slide -->
             <div class="mySlides">
@@ -232,24 +256,24 @@
                             <div id="DropDownEndless" class="DropDownContent">
                                 <div class="GridContainerCodeSnippet">
                                     <p2 style="grid-row: 1;"><b>ChunkLoader function:</b></p2>
-                                    <textarea readonly rows="18s" cols="20" class="CodeBackground">
-                                    1.
-                                    2.
-                                    3. 
-                                    4.    
-                                    5.
-                                    6.
-                                    7.
-                                    8.
-                                    9.
-                                    10.       
-                                    11. 
-                                    12. 
-                                    13.    
-                                    14.
-                                    15.
-                                    16.
-                                    17.
+                                    <textarea readonly rows="18s" cols="25" class="CodeBackground">
+                                    1. //selects a random chunk to turn on
+                                    2. private void SelectRandomPlatform()
+                                    3. {
+                                    4.     chunks[chunkIndex].SetActive(false);
+                                    5.     chunkIndex = Random.Range(0, chunks.Length);
+                                    6.     chunks[chunkIndex].SetActive(true);
+                                    7. }
+                                    8. 
+                                    9. //returns the chunkLoader gameobject back to its original position and selects a random chunk
+                                    10. private void ReturnChunkLoaderToOriginalPos()
+                                    11. {
+                                    12.      if(chunkLoader.position.z < maxRange)
+                                    13.      {
+                                    14.          chunkLoader.position = startLocation;
+                                    15.          SelectRandomPlatform();
+                                    16.      }
+                                    17. }
                                     </textarea>
 
                                     <div style="float: right; grid-row: 2;">
@@ -269,7 +293,6 @@
                     <img src="..\ImagesProjects\EndlessRunner\EndlessRunner_gif_1.gif" class="GridContent">
                     <img src="..\ImagesProjects\EndlessRunner\EndlessRunner_gif_2.gif" class="GridContent GridContent2">
                     
-                </div>
             </div>
         </div> 
     </body>
