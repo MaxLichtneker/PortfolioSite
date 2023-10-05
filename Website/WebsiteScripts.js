@@ -13,7 +13,46 @@ window.onscroll = function(){
     previousScrollPos = currentScrollPos;
 }   
 
-//
+
+const ProjectPages = ["Malaga jam", "Switch", "Overgrown", "Examen Project", "Endless Runner"];
+
+var Grid;
+
+function AddPages(){
+
+    //loops the array of projectpages to add a slide div for each one
+    for(i = 0; i < ProjectPages.length; i++){
+
+        const PageDivs = document.createElement("div");
+        PageDivs.className = "mySlides";
+        PageDivs.id = "Slide";
+
+        document.getElementById("Grid").appendChild(PageDivs);
+    }
+
+    const Slides = document.getElementsByClassName("mySlides")
+    const arr = Array.from(Slides);
+
+    //adds a grid div to each of the created slide divs
+    arr.forEach((n) => {
+
+        const PageDivsGrid = document.createElement("div");
+        PageDivsGrid.className = "GridContainer";
+        PageDivsGrid.id = "SlideGrid"; 
+
+        n.appendChild(PageDivsGrid);
+    });
+}
+
+function ProjectPage(ProjectIndex, ProjectTitle, ProjectVideo, ProjectInfoText, ProjectCodeSnippet){
+}
+
+window.onload = function(){
+    AddPages();
+
+    ProjectPage()
+}
+
 
 let slideIndex = 1;
 
