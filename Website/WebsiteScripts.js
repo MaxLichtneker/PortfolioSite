@@ -16,9 +16,11 @@ window.onscroll = function(){
 
 const ProjectPages = ["Fix my tattoo", "Switch", "Overgrown", "Examen Project", "Endless Runner"];
 
-const ProjectVideos = [null, "/Videos/Switchgameplay.mp4",
+const ProjectVideos = [null, 
+                    "/Videos/Switchgameplay.mp4",
                     "/Videos/OvergrownTrailer-720p-1695042157.mp4", 
-                    "/Videos/GameplayFilmpje(19-05-2022).mp4","/Videos/Buildv2.02022.11.19-19.01.37.04.mp4"];
+                    "/Videos/GameplayFilmpje(19-05-2022).mp4",
+                    "/Videos/Buildv2.02022.11.19-19.01.37.04.mp4"];
 
 function AddPages(){
 
@@ -33,19 +35,10 @@ function AddPages(){
         gridElement.innerHTML = "<h2 style='text-align: center; padding-top: 50px;'>"+ProjectPages[i]+"</h2>";
     }
 
-    const Slides = document.getElementsByClassName("mySlides")
-    const arr = Array.from(Slides);
+    //adds grid div
+    AddDiv("mySlides","GridContainer","SlideGrid")
 
-    //adds a grid div to each of the created slide divs
-    arr.forEach((n) => {
-
-        const PageDivsGrid = document.createElement("div");
-        PageDivsGrid.className = "GridContainer";
-        PageDivsGrid.id = "SlideGrid"; 
-        
-        n.appendChild(PageDivsGrid);
-    });
-
+    //adds video class with source to gridcontainer
     const Grids = document.getElementsByClassName("GridContainer")
     const GridArray = Array.from(Grids);
 
@@ -64,35 +57,61 @@ function AddPages(){
             videoClass.innerHTML = "<source src = "+ProjectVideos[i]+"></source>";
         }
     }
+
+    //adds text under the gridcontainer
+    AddDiv("GridContainer","GridText","");
+
+    //dynamically sets the name of the id
+    for(i = 0; i < GridArray.length; i++){
+
+        const textId = ProjectPages[i] + "Text";
+
+        const imageClass = document.getElementsByClassName("GridText");
+        imageClass[i].setAttribute("id", textId);
+    }
 }
 
-function ProjectPage(ProjectTitle, ProjectVideo, ProjectInfoText, ProjectCodeSnippet){
+//adds a new div class to the slide container with the given paramaters
+function AddDiv(ParentDiv,DivClass, DivId){
 
-    var Page = document.getElementById(ProjectTitle);
+    const Slides = document.getElementsByClassName(ParentDiv)
+    const arr = Array.from(Slides);
+
+    arr.forEach((n) => {
+
+        const PageDivs = document.createElement("div");
+        PageDivs.className = DivClass;
+
+        PageDivs.id = DivId;
+
+        n.appendChild(PageDivs);
+    });
+}
+
+function AddText(Text, ID){
+    const textField = document.getElementById(ID);
     
-    var pageChild = document.querySelector('.GridContainer');
-    const addOn = ProjectTitle + "video";
-
-    pageChild.innerHTML =  "<video class='image' controls id = "+addOn+">"
-    "</video>"
-
-    var PageVideo = document.getElementsByClassName("image")
-    if(PageVideo){
-        PageVideo.innerHTML = "<source src = "+ProjectVideo+"></source>";
-    }
+    textField.innerHTML = Text;
 }
 
 window.onload = function(){
     AddPages();
 
-    // //malaga page
-    // ProjectPage("Malaga jam","../Videos/Switch gameplay.mp4",null,null);
-
-    // //switch page
-    // ProjectPage("Switch","/Videos/Switchgameplay.mp4",null,null);
-
-    // //Overgrown page
-    // ProjectPage("Overgrown",'../Videos/OvergrownTrailer-720p-1695042157.mp4',null,null);
+    AddText(
+    `<p2> Whilst on an educational school trip which only a select few students were chosen for, 
+    I participated in the global game jam in Malaga Spain. We had 3 days to make and develop a game with the theme repair. 
+    </p2>
+    &nbsp
+    <p2>
+    Together with my group we came up with the idea to create a game about fixing tattoos. 
+    </p2>
+    &nbsp
+    <p2>
+    In this game I manly worked on making the dialog mechanic at the start of the game where it chooses a random set of dialog which will then determine which tattoo you will be fixing. 
+    I also added a fade to the screen and added the animations in game. 
+    I also worked a bit on the timer and on the slider which measures how much you are hurting the customer. 
+    </p2>
+    `,"Fix my tattooText");
 }
 
 
