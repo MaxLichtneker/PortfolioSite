@@ -97,6 +97,7 @@ function AddText(Text, ID){
 window.onload = function(){
     AddPages();
 
+    //text for malaga jam
     AddText(
     `<p2> Whilst on an educational school trip which only a select few students were chosen for, 
     I participated in the global game jam in Malaga Spain. We had 3 days to make and develop a game with the theme repair. 
@@ -112,8 +113,67 @@ window.onload = function(){
     I also worked a bit on the timer and on the slider which measures how much you are hurting the customer. 
     </p2>
     `,"Fix my tattooText");
-}
 
+    //text for switch
+    AddText(
+    `<p2> 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quibusdam sint ipsa id illo repellendus placeat veritatis, assumenda nobis voluptatem officiis tenetur aspernatur corporis vitae possimus facere odit ducimus exercitationem!
+    </p2>
+    `,"SwitchText");
+
+    //text for overgrown
+    AddText(
+    ` <p2>
+    For this school project I worked with 3 others to make a game that we would publish on Itch.io. 
+    </p2>
+    &nbsp
+    <p2>
+        We came up with a simple farming game where the world was overgrown by plants, plants all grew faster so your crops would grow faster than they normally would. 
+        I worked on the plant growth mechanics and collecting mechanics as well as adding animations to the player and the enemy character, 
+        I also made the enemy mechanics and the punching mechanics for the player. 
+    </p2>
+    &nbsp
+    <p2>
+        Check out the game on Itch.io <a href="https://frozen-chicken-nuggies.itch.io/overgrown" target="_blank" style="color:antiquewhite;">here!</a>
+    </p2>
+    &nbsp
+    <p2>
+        I worked together with: Bouke Weel the other dev and 2 artists: Anne Roos Leeuwis and Floor van den Bank. 
+    </p2>
+    `,"OvergrownText");
+
+    //text for exam project
+    AddText(
+    `<p2>
+    This was the last project I worked on at the Grafisch Lyceum Utrecht. 
+    </p2>
+    &nbsp
+    <p2>
+        It was a solo project where we were given multiple different assets to make a game with.
+        I chose a pack which had a bank heist theme so my game revolved around that aspect. We had to come up with 3 different mechanics and dynamics which we had to document thoroughly.
+    </p2>  
+    &nbsp
+    <p2>
+        The goal of my game was quite simple, rob the bank. You had about 2 minute's to get in and out, at the same time the police would be raiding the building and be an obstacle for the player. 
+        The more money you were able to steal the higher the score at the end of the game.
+    </p2>
+    `
+    ,"Examen ProjectText");
+
+    //text for endless runner
+    AddText(
+    `<p2>
+        This is a solo project I had to work on at school where we had to build an endless runner. 
+        The twist for this project is that we had to make all the art ourselves.
+    </p2>
+    &nbsp
+    <p2>
+        I chose for the theme of space cause I’m a big Sci-fi fan.
+        I was really motivated for this project so I decided to add multiplayer to the game as well cause we were learning how to do that at the same time.
+    </p2>
+    `
+    ,"Endless RunnerText");
+}
 
 let slideIndex = 1;
 
