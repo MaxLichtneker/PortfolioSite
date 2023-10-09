@@ -36,10 +36,12 @@ function AddPages(){
     }
 
     //adds grid div
-    AddDiv("mySlides","GridContainer","SlideGrid")
+    AddDiv("mySlides","GridContainer","");
+    //dynamically adds grid behind the page name to the id
+    AddId("GridContainer","Grid");
 
     //adds video class with source to gridcontainer
-    const Grids = document.getElementsByClassName("GridContainer")
+    const Grids = document.getElementsByClassName("GridContainer");
     const GridArray = Array.from(Grids);
 
     for(i = 0; i < GridArray.length; i++){
@@ -60,15 +62,11 @@ function AddPages(){
 
     //adds text under the gridcontainer
     AddDiv("GridContainer","GridText","");
+     //dynamically adds grid behind the page name to the id
+    AddId("GridText","Text");
 
-    //dynamically sets the name of the id
-    for(i = 0; i < GridArray.length; i++){
-
-        const textId = ProjectPages[i] + "Text";
-
-        const imageClass = document.getElementsByClassName("GridText");
-        imageClass[i].setAttribute("id", textId);
-    }
+    AddDiv("GridContainer", "GridContent", "");
+    AddId("GridContent","ImageGrid");
 }
 
 //adds a new div class to the slide container with the given paramaters
@@ -87,18 +85,28 @@ function AddDiv(ParentDiv,DivClass, DivId){
         n.appendChild(PageDivs);
     });
 }
+//adds additional text to the id that already has the given page name added 
+function AddId(ClassName, AdditionalText){
+    for(i = 0; i < ProjectPages.length; i++){
+        const textId = ProjectPages[i] + AdditionalText;
 
-function AddText(Text, ID){
+        const imageClass = document.getElementsByClassName(ClassName);
+        imageClass[i].setAttribute("id", textId);
+    }
+}
+
+//add html to the given element id
+function AddElement(Text, ID){
     const textField = document.getElementById(ID);
     
-    textField.innerHTML = Text;
+    textField.innerHTML += Text;
 }
 
 window.onload = function(){
     AddPages();
 
     //text for malaga jam
-    AddText(
+    AddElement(
     `<p2> Whilst on an educational school trip which only a select few students were chosen for, 
     I participated in the global game jam in Malaga Spain. We had 3 days to make and develop a game with the theme repair. 
     </p2>
@@ -113,16 +121,21 @@ window.onload = function(){
     I also worked a bit on the timer and on the slider which measures how much you are hurting the customer. 
     </p2>
     `,"Fix my tattooText");
+    AddElement("<img src='/ImagesProjects/MalagaJam/MalagaJam_Gif_2.gif'>","Fix my tattooImageGrid");
+    AddElement("<img src='/ImagesProjects/MalagaJam/MalagaJam_Screen_1.png' style = 'width: 80vh; height: 40vh;'>","Fix my tattooImageGrid");
 
     //text for switch
-    AddText(
+    AddElement(
     `<p2> 
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quibusdam sint ipsa id illo repellendus placeat veritatis, assumenda nobis voluptatem officiis tenetur aspernatur corporis vitae possimus facere odit ducimus exercitationem!
     </p2>
     `,"SwitchText");
 
+    //Images for Switch
+
+
     //text for overgrown
-    AddText(
+    AddElement(
     ` <p2>
     For this school project I worked with 3 others to make a game that we would publish on Itch.io. 
     </p2>
@@ -143,7 +156,7 @@ window.onload = function(){
     `,"OvergrownText");
 
     //text for exam project
-    AddText(
+    AddElement(
     `<p2>
     This was the last project I worked on at the Grafisch Lyceum Utrecht. 
     </p2>
@@ -161,7 +174,7 @@ window.onload = function(){
     ,"Examen ProjectText");
 
     //text for endless runner
-    AddText(
+    AddElement(
     `<p2>
         This is a solo project I had to work on at school where we had to build an endless runner. 
         The twist for this project is that we had to make all the art ourselves.
@@ -175,6 +188,8 @@ window.onload = function(){
     ,"Endless RunnerText");
 }
 
+
+//handle slides
 let slideIndex = 1;
 
 ShowSlides(slideIndex);
