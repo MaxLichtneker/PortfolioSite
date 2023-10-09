@@ -16,7 +16,7 @@ window.onscroll = function(){
 
 const ProjectPages = ["Fix my tattoo", "Switch", "Overgrown", "Examen Project", "Endless Runner"];
 
-const ProjectVideos = [null, 
+const ProjectVideos = ["/Videos/FixMyTattooGameplay.mp4", 
                     "/Videos/Switchgameplay.mp4",
                     "/Videos/OvergrownTrailer-720p-1695042157.mp4", 
                     "/Videos/GameplayFilmpje(19-05-2022).mp4",
