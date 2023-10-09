@@ -121,8 +121,9 @@ window.onload = function(){
     I also worked a bit on the timer and on the slider which measures how much you are hurting the customer. 
     </p2>
     `,"Fix my tattooText");
-    AddElement("<img src='/ImagesProjects/MalagaJam/MalagaJam_Gif_2.gif'>","Fix my tattooImageGrid");
-    AddElement("<img src='/ImagesProjects/MalagaJam/MalagaJam_Screen_1.png' style = 'width: 80vh; height: 40vh;'>","Fix my tattooImageGrid");
+    //images for malaga jam
+    AddElement("<img src='/ImagesProjects/MalagaJam/MalagaJam_Gif_2.gif' class = 'ProjectImage'>","Fix my tattooImageGrid");
+    AddElement("<img src='/ImagesProjects/MalagaJam/MalagaJam_Screen_1.png' class = 'ProjectImage'>","Fix my tattooImageGrid");
 
     //text for switch
     AddElement(
@@ -130,10 +131,10 @@ window.onload = function(){
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quibusdam sint ipsa id illo repellendus placeat veritatis, assumenda nobis voluptatem officiis tenetur aspernatur corporis vitae possimus facere odit ducimus exercitationem!
     </p2>
     `,"SwitchText");
-
     //Images for Switch
-
-
+    AddElement("<img src='/ImagesProjects/Switch/SwitchScreenshot.png' class = 'ProjectImage'>","SwitchImageGrid");
+    AddElement("<img src='/ImagesProjects/Switch/SwitchScreenshot2.png'class = 'ProjectImage'>","SwitchImageGrid");
+    
     //text for overgrown
     AddElement(
     ` <p2>
@@ -154,6 +155,9 @@ window.onload = function(){
         I worked together with: Bouke Weel the other dev and 2 artists: Anne Roos Leeuwis and Floor van den Bank. 
     </p2>
     `,"OvergrownText");
+    //Images for Overgrown
+    AddElement("<img src='/ImagesProjects/OverGrown/OvergownDay.png' class = 'ProjectImage'>","OvergrownImageGrid");
+    AddElement("<img src='/ImagesProjects/OverGrown/OvergownNIght.png' class = 'ProjectImage'>","OvergrownImageGrid");
 
     //text for exam project
     AddElement(
@@ -172,6 +176,9 @@ window.onload = function(){
     </p2>
     `
     ,"Examen ProjectText");
+    //Images for Examen project
+    AddElement("<img src='/ImagesProjects/ExamenProject/ExamenProjectScreen_1.png' class = 'ProjectImage'>","Examen ProjectImageGrid");
+    AddElement("<img src='/ImagesProjects/ExamenProject/ExamenProjectScreen_2.png' class = 'ProjectImage'>","Examen ProjectImageGrid");
 
     //text for endless runner
     AddElement(
@@ -186,6 +193,9 @@ window.onload = function(){
     </p2>
     `
     ,"Endless RunnerText");
+    //Images for Endless runnner project
+    AddElement("<img src='/ImagesProjects/EndlessRunner/EndlessRunner_gif_1.gif' class = 'ProjectImage'>","Endless RunnerImageGrid");
+    AddElement("<img src='/ImagesProjects/EndlessRunner/EndlessRunner_gif_2.gif' class = 'ProjectImage'>","Endless RunnerImageGrid");
 }
 
 

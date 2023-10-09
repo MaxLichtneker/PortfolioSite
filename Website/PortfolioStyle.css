@@ -346,19 +346,23 @@ padding: 3px;
 }
 
 .GridContent{
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
 
-    grid-template-columns: repeat(1, 1fr);
-
-    grid-auto-flow: column;
     justify-content: center;
     align-items: center;
-
+    
     grid-row: 3;
     padding-top: 50px;
-    grid-column: 1/8;
+    
+    grid-column: 1/10;
+    gap: 20px;
 }
 
+.ProjectImage{
+    width: 80vh;
+    height: 41vh;
+}
 
 .SlideShow-Container{
     max-width: 1000px;
