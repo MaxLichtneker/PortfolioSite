@@ -35,6 +35,8 @@ function AddPages(){
         gridElement.innerHTML = "<h2 style='text-align: center; padding-top: 50px;'>"+ProjectPages[i]+"</h2>";
     }
 
+    document.getElementById(ProjectPages[0]).style.display = "block";
+
     //adds grid div
     AddDiv("mySlides","GridContainer","");
     //dynamically adds grid behind the page name to the id
@@ -94,12 +96,21 @@ function AddId(ClassName, AdditionalText){
         imageClass[i].setAttribute("id", textId);
     }
 }
-
 //add html to the given element id
 function AddElement(Text, ID){
     const textField = document.getElementById(ID);
     
     textField.innerHTML += Text;
+}
+
+function AddCodeSnippit(CodeSnippit, GridId, SnippitName){
+    AddElement(`
+    <div class='DropDown'>
+        <button onclick="ShowDropDown('', '')" class="DownloadButton DropDownButton DownloadButton1">
+        <div style="float: left;">&lt;/&gt; Code snippits</div>
+        <div style="float: right; transition: .5s;" id="">+</div>
+    </div>
+    `,GridId);
 }
 
 window.onload = function(){
@@ -155,7 +166,36 @@ window.onload = function(){
         I worked together with: Bouke Weel the other dev and 2 artists: Anne Roos Leeuwis and Floor van den Bank. 
     </p2>
     `,"OvergrownText");
-    //Images for Overgrown
+    // AddElement(
+    // `<div class='DropDown'>
+    //     <button onclick="ShowDropDown('DropDown_Overgrown', 'RotatedOvergrown')" class="DownloadButton DropDownButton DownloadButton1">
+    //         <div style="float: left;">&lt;/&gt; Code snippits</div>
+    //         <div style="float: right; transition: .5s;" id="RotatedEndless">+</div>
+    //     </button>
+
+    //     <div id="DropDown_Overgrown" class="DropDownContent">
+    //     <div class="GridContainerCodeSnippet">
+    //         <p2 style="grid-row: 1; "><b>GrowPlant function:</b></p2>
+    //         <textarea readonly rows="18"class="CodeBackground">
+    //         1. //turns on the new sprite and turns the older one off
+    //         2. private void GrowPlant()
+    //         3. {
+    //         4.     if(growthDuration <= 0 && fullyGrown == false)
+    //         5.     {
+    //         6.         plantSprite.sprite = null;
+    //         7.
+    //         8.         arrayIndex++;
+    //         9. 
+    //         10.         plantSprite.sprite = plantData.growthSprites[arrayIndex];
+    //         11.     }
+    //         12.     else if(arrayIndex == plantData.growthSprites.Length - 1)
+    //         13.     {
+    //         14.         cropState = CropState.dead;
+    //         15.         fullyGrown = true;
+    //         16.     }
+    //         17. }
+    //         </textarea>
+    // </div>`,"OvergrownGrid");
     AddElement("<img src='/ImagesProjects/OverGrown/OvergownDay.png' class = 'ProjectImage'>","OvergrownImageGrid");
     AddElement("<img src='/ImagesProjects/OverGrown/OvergownNIght.png' class = 'ProjectImage'>","OvergrownImageGrid");
 
