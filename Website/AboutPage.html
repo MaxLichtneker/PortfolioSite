@@ -27,15 +27,13 @@
             </div>
         </div>
 
-        <!--contains story about myself and foto -->
-        <div class="VerticalCenter" style="background-color: #E0E0E0; flex-wrap: nowrap; align-items: center; height: 1000px; width: 100%; position: fixed;">
+        <div class="Parralax" style="background-image: url(); flex-direction: row;padding-left: 100px;">
+            
+            <div style="position: fixed; display: flex; flex-direction: row; gap: 50px; align-items: center; flex-wrap: wrap;">
 
-            <div style="float: left; padding-bottom: 400px;" >
                 <img src="..\Images\MaxLichtneker-modified.png" alt="AboutMeImage">
-            </div>
 
-            <div style="float: left; padding-left: 20px;  padding-bottom: 400px;">
-                <p3> 
+                <p3 style="width: 50vw;"> 
                     I live in the Netherlands and am currently studying software development at Hogeschool Utrecht. Ever since I first started playing video games, 
                     I’ve been curious about how they’re made and what goes on behind the scenes. 
                     So it’s really cool to now be working on and making my own games, while teaming up with some great people. 
@@ -44,20 +42,17 @@
                 </p3>
             </div>
         </div>
-    </body>
-
-    <body>
+     
         <div class="ScrollBar", id="Skills">
 
-        <button class="ScrollDownButton ScrollDownButton1" onclick="document.getElementById('Skills').scrollIntoView();">
-            <hr id="hr-nav"/>
-            <i class="arrow down"></i>
-        </button>
-        <div>
+            <button class="ScrollDownButton ScrollDownButton1" onclick="document.getElementById('Skills').scrollIntoView();">
+                <hr id="hr-nav"/>
+                <i class="arrow down"></i>
+            </button>
+            <div>
 
 
-        <h3>Skills:</h3>
-        <div class="SkillBody">
+            <h3>Skills:</h3>
 
             <!--list of skills -->
             <p2>-Unity 3D (animator and animation, terrain tool, physics , lighting, shadergraph, urp,) </p2>
@@ -73,7 +68,6 @@
             <p2>-Software development version control/GIT (since 2019)</p2>
             <p2>-Basic knowledge of Photoshop, Adobe Illustrator and Premiere Pro</p2>
 
-        </div>
             <!-- download link to CV-->
             <h3>Download my CV:</h3>
 
@@ -85,11 +79,10 @@
             </form>
 
             <!--Images of software I use-->
-            <div class="SoftwarePadding">
-                <img src="..\ImagesSoftware\Unity_2021.svg" style="width: 220px; height: 117.75; padding-bottom: 10px;" >
-                <img src="..\ImagesSoftware\unreal-engine.svg" class="SoftwareSymbols">
-                <img src="..\ImagesSoftware\Visual_Studio_Icon_2022.svg" width="100px" height="100px">
-            </div>
+            <img src="..\ImagesSoftware\Unity_2021.svg" style="width: 220px; height: 117.75; padding-bottom: 10px;" >
+            <img src="..\ImagesSoftware\unreal-engine.svg" class="SoftwareSymbols">
+            <img src="..\ImagesSoftware\Visual_Studio_Icon_2022.svg" width="100px" height="100px">
+        </div>
     </body>
 </head>
 

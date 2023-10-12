@@ -48,32 +48,31 @@
             </div>
         </div>
 
-        <div class="VerticalCenter" style="padding-top: 0; width:100%; position: fixed; overflow: visible;flex-direction: column; align-items: center;">
+        <div class="Parralax">
             <!--video that will contain a compilation of everything I have worked on-->
-            <video autoplay muted loop style="height: auto; width: 100%;" >
+            <!-- <video autoplay muted loop>
                 <source src="..\Videos\Hunt  Showdown 2023.05.30 - 20.46.31.05.DVR.mp4" style="z-index: -1;">
-            </video>
+            </video> -->
 
             <!--title in the middle of the screen-->
-            <div style="overflow: visible; position: absolute; text-align: center;padding-bottom: 350px;">
+            <div style= "position: fixed; text-align: center; top: 30%; z-index: 0;">
                 <h1>Max Lichtneker</h1>
-               <p1>Software & game developer</p1>
+                <p1>Software & game developer</p1>
             </div>
         </div>
-    </body>
+        
 
-    <body>
         <div class="ScrollBar" id= "section">
 
             <button class="ScrollDownButton ScrollDownButton1" onclick="document.getElementById('section').scrollIntoView();">
                 <hr id="hr-nav"/>
-                 <i class="arrow down"></i>
+                <i class="arrow down"></i>
             </button>
 
             <h3><b>Contact</b></h3>
 
 
-             <!--contact form so I can recieve E-mails-->
+                <!--contact form so I can recieve E-mails-->
             <form name="ContactForm" action="https://formspree.io/f/xjvqokaj" method="POST">
                 <div>
                     <input type="text" id="fname" name="name" placeholder="Name" required>
@@ -92,16 +91,14 @@
                 </div>
             </form>
 
-
-            
-            <!--images that link to all my socials-->
-            <a href="https://twitter.com/MLichtneker"><img src="..\Images\twitter.svg" class="ContactSymbols">
-            <a href="https://www.facebook.com/"><img src="..\Images\facebook.svg" class="ContactSymbols">
-            <a href="https://www.instagram.com/"><img src="..\Images\instagram.svg" class="ContactSymbols">
-            <a href="https://www.linkedin.com/in/max-lichtneker-2a49321a1/"><img src="..\Images\linkedin.svg" class="ContactSymbols">
-            
-            </a>
-
+                <div style="flex-direction: column;">
+                    <!--images that link to all my socials-->
+                    <a href="https://twitter.com/MLichtneker"><img src="..\Images\twitter.svg" class="ContactSymbols">
+                        <a href="https://www.facebook.com/"><img src="..\Images\facebook.svg" class="ContactSymbols">
+                        <a href="https://www.instagram.com/"><img src="..\Images\instagram.svg" class="ContactSymbols">
+                        <a href="https://www.linkedin.com/in/max-lichtneker-2a49321a1/"><img src="..\Images\linkedin.svg" class="ContactSymbols">
+                    </a>
+                </div>
         </div>
     </body>
 </head>
