@@ -103,16 +103,6 @@ function AddElement(Text, ID){
     textField.innerHTML += Text;
 }
 
-function AddCodeSnippit(CodeSnippit, GridId, SnippitName){
-    AddElement(`
-    <div class='DropDown'>
-        <button onclick="ShowDropDown('', '')" class="DownloadButton DropDownButton DownloadButton1">
-        <div style="float: left;">&lt;/&gt; Code snippits</div>
-        <div style="float: right; transition: .5s;" id="">+</div>
-    </div>
-    `,GridId);
-}
-
 window.onload = function(){
     AddPages();
 
@@ -139,7 +129,8 @@ window.onload = function(){
     //text for switch
     AddElement(
     `<p2> 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quibusdam sint ipsa id illo repellendus placeat veritatis, assumenda nobis voluptatem officiis tenetur aspernatur corporis vitae possimus facere odit ducimus exercitationem!
+        Switch is a game I worked on during my internship at GreyGames. 
+        I got the time and space to work on a new project that was to be a first person shooter with the twist that the player could manipulate the environment to their advantage. 
     </p2>
     `,"SwitchText");
     //Images for Switch
@@ -166,36 +157,7 @@ window.onload = function(){
         I worked together with: Bouke Weel the other dev and 2 artists: Anne Roos Leeuwis and Floor van den Bank. 
     </p2>
     `,"OvergrownText");
-    // AddElement(
-    // `<div class='DropDown'>
-    //     <button onclick="ShowDropDown('DropDown_Overgrown', 'RotatedOvergrown')" class="DownloadButton DropDownButton DownloadButton1">
-    //         <div style="float: left;">&lt;/&gt; Code snippits</div>
-    //         <div style="float: right; transition: .5s;" id="RotatedEndless">+</div>
-    //     </button>
-
-    //     <div id="DropDown_Overgrown" class="DropDownContent">
-    //     <div class="GridContainerCodeSnippet">
-    //         <p2 style="grid-row: 1; "><b>GrowPlant function:</b></p2>
-    //         <textarea readonly rows="18"class="CodeBackground">
-    //         1. //turns on the new sprite and turns the older one off
-    //         2. private void GrowPlant()
-    //         3. {
-    //         4.     if(growthDuration <= 0 && fullyGrown == false)
-    //         5.     {
-    //         6.         plantSprite.sprite = null;
-    //         7.
-    //         8.         arrayIndex++;
-    //         9. 
-    //         10.         plantSprite.sprite = plantData.growthSprites[arrayIndex];
-    //         11.     }
-    //         12.     else if(arrayIndex == plantData.growthSprites.Length - 1)
-    //         13.     {
-    //         14.         cropState = CropState.dead;
-    //         15.         fullyGrown = true;
-    //         16.     }
-    //         17. }
-    //         </textarea>
-    // </div>`,"OvergrownGrid");
+   
     AddElement("<img src='/ImagesProjects/OverGrown/OvergownDay.png' class = 'ProjectImage'>","OvergrownImageGrid");
     AddElement("<img src='/ImagesProjects/OverGrown/OvergownNIght.png' class = 'ProjectImage'>","OvergrownImageGrid");
 
@@ -237,7 +199,6 @@ window.onload = function(){
     AddElement("<img src='/ImagesProjects/EndlessRunner/EndlessRunner_gif_1.gif' class = 'ProjectImage'>","Endless RunnerImageGrid");
     AddElement("<img src='/ImagesProjects/EndlessRunner/EndlessRunner_gif_2.gif' class = 'ProjectImage'>","Endless RunnerImageGrid");
 }
-
 
 //handle slides
 let slideIndex = 1;
