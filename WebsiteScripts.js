@@ -32,7 +32,6 @@ function AddPages(){
         PageDivs.id = ProjectPages[i];
         
         var gridElement = document.getElementById("Grid").appendChild(PageDivs);
-        gridElement.innerHTML = "<h2 style='text-align: center; padding-top: 50px;'>"+ProjectPages[i]+"</h2>";
     }
 
     document.getElementById(ProjectPages[0]).style.display = "block";
@@ -48,9 +47,10 @@ function AddPages(){
 
     for(i = 0; i < GridArray.length; i++){
         var gridId = ProjectPages[i] + "Vid"
-
-        GridArray[i].innerHTML =  "<video class='image' controls>"
-        "</video>"
+       
+        GridArray[i].innerHTML = "<h2 style='text-align: center;'>"+ProjectPages[i]+"</h2>";
+        GridArray[i].innerHTML += "<video class='image' controls>"
+        "</video>";
 
         const imageClass = document.getElementsByClassName("image");
         imageClass[i].setAttribute("id", gridId);

@@ -19,7 +19,6 @@ h2{
 
 h3{
     font-size: 2rem;
-
     padding-top: 1rem;
 }
 
@@ -113,46 +112,6 @@ button.ScrollDownButton1:hover~#hr-nav{
 /* … */
 
 /* || Containers */
-.container{
-    width: 100%;
-    height: 60rem;
-
-    margin-left: auto;
-    margin-right: auto;
-    
-    padding-top: 6rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-
-    object-fit: cover;
-    position: fixed;
-
-    text-align: start;
-
-    justify-content: center;
-    background-color: #E0E0E0;
-}
-
-/* Main page container */
-.containerMainPage{
-    width: 100%;
-    height: 60rem;
-
-    margin-left: auto;
-    margin-right: auto;
-    
-    padding-top: 6rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-
-    object-fit: cover;
-    position: fixed;
-
-    text-align: center;
-
-    justify-content: center;
-    background-color: #E0E0E0;
-}
 
 /* makes sure the buttons in the taskbar are central on the screen*/
 .VerticalCenter{
@@ -239,6 +198,12 @@ textarea, input{
     height: 1000px;
 }
 
+.MainPageText{
+    text-align: center;
+    top: 30%;
+    z-index: 0;
+    position: fixed;
+}
 
 /* style for the contact images*/
 .ContactSymbols{
@@ -282,13 +247,13 @@ padding: 3px;
 }
 
 .GridContainer{
-    display: grid;
-    grid-template-columns:repeat(6, 1fr);
-    grid-template-rows:repeat(1, 1fr);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
-    grid-area: auto;
 
-    margin: 0 auto;
+    margin: 100px;
+    margin-top: 60px;
     
 }
 
@@ -303,22 +268,14 @@ padding: 3px;
 }
 
 .image{
-    grid-column: 2/6;
-
-    width: 100%; 
-    height: 100%;
-    grid-row: 1;
-    
-    display: flex;
+    width: 71vw; 
+    height: 80%;
+}
+.GridText{
+    width: 71vw; 
+    height: 80%;
 }
   
-
-.GridText{
-    grid-column: 2/6; 
-    grid-row: 2;
-
-}
-
 .GridContent{
     display: flex;
     flex-wrap: wrap;
@@ -412,4 +369,24 @@ padding: 3px;
     float: left;
 
     grid-row: 2;
+}
+
+@media (max-width: 768px){
+
+    .Parralax{
+        background-attachment: local;
+    }
+
+    .MainPageText{
+        position: relative;
+    }
+
+    .ProjectImage{
+        width: 70vw;
+        height: 20vh;
+    }
+    
+    p1{
+        font-size: 1.7rem;
+    }
 }
