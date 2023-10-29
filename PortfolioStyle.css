@@ -8,10 +8,6 @@ body{
     padding-top: 75px;
 }
 
-h1{
-    position: relative;
-}
-
 h2{
     position: relative;
     text-align: center;
@@ -34,6 +30,7 @@ p2{
 p3{
     color: #284B63;
     font-size: 1.3rem;
+    width: 50vw;
 }
 
 /* || button style */
@@ -184,6 +181,12 @@ textarea, input{
     z-index: 0;
 }
 
+.ParralaxAboutPage{
+    background-image: url(); 
+    align-items:center;
+    flex-direction: column;
+}
+
 /* bar that scrolls up over specific elements */
 .ScrollBar{
     background-color: #353535;
@@ -194,8 +197,17 @@ textarea, input{
     position: relative;
 
     text-align: center;
+}
 
-    height: 1000px;
+.ImageTextWrap{
+    position: fixed; 
+
+    top: 25%;
+    display: flex; 
+    flex-direction: row; 
+    gap: 50px; 
+    align-items: center; 
+    flex-wrap: wrap;
 }
 
 .MainPageText{
@@ -320,6 +332,7 @@ padding: 3px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    margin:20px;
 }
   
 .next {
@@ -371,10 +384,17 @@ padding: 3px;
     grid-row: 2;
 }
 
-@media (max-width: 768px){
+@media (max-width: 1000px){
 
     .Parralax{
         background-attachment: local;
+    }
+
+    .ParralaxAboutPage{
+        padding-top: 50px;
+        background-attachment: local;
+        flex-direction: column;
+        min-height: 10vh;
     }
 
     .ProjectImage{
@@ -382,7 +402,19 @@ padding: 3px;
         height: 20vh;
     }
     
-    p1{
-        font-size: 1.7rem;
+    .ImageTextWrap{
+        position: relative;
+        padding-bottom:50px;
+        align-self: center;
+
+    }
+    
+    body{
+        font-size: 2rem;
+    }
+    
+    p3{
+        font-size: 2rem;
+        width: 100vw;
     }
 }
