@@ -1,6 +1,5 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <link rel="stylesheet" href="PortfolioStyle.css">
     <body>
@@ -37,11 +36,25 @@
         <div class="SubBar" id="SubBar">
             <hr id="SubBarLine" style=" margin: 0"/>
             <div class="VerticalCenter" id="ProjectList">
-                <button id="ProjectButton" class="ButtonSubBar Button1"onclick= "CurrentSlide(1);">Malaga Jam</button>
-                <button id="ProjectButton" class="ButtonSubBar Button1" onclick= "CurrentSlide(2);">Switch</button>
-                <button id="ProjectButton" class="ButtonSubBar Button1" id="Button" onclick= "CurrentSlide(3);"> Overgrown</button>
-                <button id="ProjectButton" class="ButtonSubBar Button1"onclick="CurrentSlide(4);"> ExamenProject </button>
-                <button id="ProjectButton" class="ButtonSubBar Button1"onclick="CurrentSlide(5)"> Endless Runner </button>
+                <div class="ProjectList">
+                    <button id="ProjectButton" class="ButtonSubBar Button1"onclick= "CurrentSlide(1);">Malaga Jam</button>
+                    <button id="ProjectButton" class="ButtonSubBar Button1" onclick= "CurrentSlide(2);">Switch</button>
+                    <button id="ProjectButton" class="ButtonSubBar Button1" onclick= "CurrentSlide(3);"> Overgrown</button>
+                    <button id="ProjectButton" class="ButtonSubBar Button1"onclick="CurrentSlide(4);"> ExamenProject </button>
+                    <button id="ProjectButton" class="ButtonSubBar Button1"onclick="CurrentSlide(5)"> Endless Runner </button>
+                </div> 
+            </div>
+
+            <div class = "dropdown">
+                <button class="dropbtn"> = </button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="CurrentSlide(1)">Malaga jam</a>
+                    <a href="#" onclick="CurrentSlide(2)">Switch</a>
+                    <a href="#" onclick="CurrentSlide(3)">Overgrown</a>
+                    <a href="#" onclick="CurrentSlide(4)">ExamenProject</a>
+                    <a href="#" onclick="CurrentSlide(5)">Endless Runner</a>
+                 
+                </div>
             </div>
         </div>
 

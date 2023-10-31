@@ -121,6 +121,7 @@ button.ScrollDownButton1:hover~#hr-nav{
     padding-top: 20px;
     
 }
+
 /* … */
 
 /* Task bars */
@@ -344,47 +345,47 @@ padding: 3px;
     background-color: rgba(0,0,0,0.8);
 }
 
-.DropDown{
-    position: relative;
-    display: inline-block;
-    grid-row: 3;
-
-    grid-column: 2/6;
-
-    padding-top: 20px;
+.dropbtn {
+background-color: #ffffff00;
+color: white;
+padding: 16px;
+font-size: 1.5rem;
+border: none;
 }
 
-.DropDownContent{
-    display: none;
-    position: relative;
-    background-color: #424242;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    text-align: start;
+.dropdown {
+position: relative;
+
+display: none;
+float: right;
+right: 20px;
+direction: rtl;
 }
 
-.CodeBackground{
-    border-radius: 4px;
-    background-color: #1d1f2191;;
-    position: relative;
-
-    font-family: Menlo,Bitstream Vera Sans Mono,DejaVu Sans Mono,Monaco,Consolas,monospace;
-    resize: none;
-
-    right: 9%;
-    color: #E0E0E0;
-    width: 720px;
-    border: none;
-    text-align: start;
-
-    float: left;
-
-    grid-row: 2;
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #E0E0E0;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 3;
+direction: ltr;
 }
 
-@media (max-width: 1000px){
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown-content a:hover {background-color: #4745454f;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #203e52;}
+
+@media (max-width: 875px){
 
     .Parralax{
         background-attachment: local;
@@ -395,6 +396,7 @@ padding: 3px;
         background-attachment: local;
         flex-direction: column;
         min-height: 10vh;
+
     }
 
     .ProjectImage{
@@ -407,14 +409,53 @@ padding: 3px;
         padding-bottom:50px;
         align-self: center;
 
+        margin: 20px;
     }
     
-    body{
+    .MainPageText{
+        position: relative;
+        padding-top: 250px;
+    }
+
+
+    .skillList{
+        margin: 40px;
+    }
+
+    .TaskBar{
+        height: 90px;
+    }
+
+    .SubBar{
+        height: 85px;
+    }
+
+    h1{
         font-size: 2rem;
     }
-    
+
+    .Button{
+        font-size: 2rem;
+    }
+
+    .ButtonSubBar{
+        font-size: 1.9rem;
+    }
+
+    p2{
+        font-size: 2rem;
+    }
+
     p3{
         font-size: 2rem;
         width: 100vw;
+    }
+
+    .ProjectList{
+        display: none;
+    }
+
+    .dropdown{
+        display: inline-block;
     }
 }
